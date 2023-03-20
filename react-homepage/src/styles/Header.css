@@ -1,0 +1,29 @@
+.header {
+	width: 100%;
+	height: fit-content;
+	background: var(--gray);
+	padding: 2rem 1rem 0.5rem 1rem;
+}
+.header .top-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header .personal {
+	display: flex;
+	gap: 0.5rem;
+}
+.header img {
+	width: 50px;
+	height: 50px;
+}
+
+.header .title {
+	font-weight: 800;
+	font-size: 2.5rem;
+}
+
+.header .social {
+	display: flex;
+	gap: 0.5rem;
+}

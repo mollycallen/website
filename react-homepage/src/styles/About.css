@@ -1,0 +1,83 @@
+.about {
+	position: relative;
+	overflow: hidden;
+	margin: 1rem;
+	background: white;
+}
+
+.about .cat-title {
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 1.5rem 0 0.5rem 0;
+}
+.about .cat > * {
+	font-size: 0.8rem;
+}
+.about .cat-detail {
+	line-height: 1.2rem;
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+.about .cat-detail.skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+.about .cat-detail .skill {
+	flex: 1;
+	padding: 0.3rem;
+}
+
+.about .school-icon {
+	width: 25px;
+	height: 25px;
+}
+.about .row {
+	display: flex;
+	align-items: center;
+	padding-bottom: 1rem;
+	gap: 5px;
+	padding-left: 0.5rem;
+}
+.about .avatar {
+	float: right;
+	border: 2px solid #bbb;
+	padding: 0.3rem;
+	border-radius: 50%;
+	display: flex;
+}
+.about .avatar img {
+	width: 150px;
+	height: 200px;
+	opacity: 70%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.about .job {
+	display: flex;
+	flex-direction: column;
+	font-size: 0.7rem;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 0.5rem;
+	margin-left: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.about .job-header {
+	display: flex;
+	justify-content: space-between;
+	line-height: normal;
+	padding-bottom: 0.5rem;
+}
+.about .job-detail {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	line-height: normal;
+}
+
+.about #more-div {
+	display: none;
+}

@@ -1,6 +1,131 @@
+:root {
+	--dark: #29353c;
+	--blue: #44576d;
+	--sage: #668598;
+	--ocean: #aac7d8;
+	--sky: #dfebf6;
+	--gray: #e6e6e6;
+	--black: #333;
+	--light-gray: #eee;
+}
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background: #ccc;
+	font-family: "Comfortaa", cursive;
+}
+body {
+	background: var(--gray);
+	background: linear-gradient(90deg, var(--dark) 34%, var(--sage) 97%);
+}
+.border {
+	padding: 1rem;
+	border: 1px solid var(--gray);
+	border-radius: 4px;
+	box-shadow: 4px 3px 5px 0px rgba(100, 100, 100, 0.75);
+	-webkit-box-shadow: 4px 3px 5px 0px rgba(100, 100, 100, 0.75);
+	-moz-box-shadow: 4px 3px 5px 0px rgba(115, 103, 103, 0.75);
+}
+
+.title {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.standout {
+	color: #914022;
+	font-weight: 800;
+	display: inline;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	width: 100%;
+	height: 100%;
+}
+.main-container .right-side {
+	flex: 1;
+}
+.main-container .left-side {
+	flex: 2.5;
+}
+.indent {
+	padding-left: 0.8rem;
+}
+
+.btn {
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	background: var(--gray);
+	color: var(--black);
+	cursor: pointer;
+	font-weight: 600;
+}
+.btn.small-btn {
+	font-size: 0.6rem;
+	padding: 0.4rem 0.4rem;
+	margin-top: 0;
+	white-space: nowrap;
+}
+.btn:hover {
+	background: var(--black);
+	color: white;
+	font-weight: 600;
+}
+.link {
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 0.8rem;
+	text-decoration: none;
+}
+
+.btn-div {
+	display: flex;
+	justify-content: flex-end;
+}
+.error {
+	color: red;
+	padding: 1rem;
+	font-weight: bold;
+}
+
+.msg {
+	color: blue;
+	padding: 1rem;
+	font-weight: bold;
+}
+.big-text {
+	font-size: 1.5rem;
+}
+.med-text {
+	font-size: 1rem;
+}
+.small-text {
+	font-size: 0.7rem;
+}
+.right-side {
+	background: var(--ocean);
+	padding: 1rem;
+}
+.right-side .box {
+	padding: 0.5rem;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	margin-top: 0.5rem;
+}
+
+.right-side .box .heading {
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.5rem 0;
+}
+.right-side .cat-box {
+	background: var(--sage);
+	color: var(--light-gray);
+}
+.icon {
+	padding-right: 0.5rem;
 }
