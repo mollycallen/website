@@ -1,0 +1,42 @@
+.header {
+	width: 100%;
+	height: fit-content;
+	background: var(--gray);
+	padding: 2rem 1rem 0.5rem 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 2rem;
+	padding-bottom: 1rem;
+}
+.header .header-left {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header .name {
+	font-weight: 800;
+	font-size: 2rem;
+	color: var(--blue);
+}
+.header .email {
+	font-weight: 800;
+	font-size: 1.2rem;
+	color: var(--sage);
+}
+.header .header-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+.header .social {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.5rem;
+}
+.header .social a {
+	width: 30px;
+	height: 30px;
+}

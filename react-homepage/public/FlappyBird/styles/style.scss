@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: whitesmoke;
+	overflow: hidden;
+	background: #242333;
+}
+.title {
+	z-index: 10;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	inset: 0;
+	flex-direction: column;
+}
+.subtitle {
+	margin-top: 0.5rem;
+}
+.hide {
+	display: none;
+}
+
+.bird {
+	--bird-top: -1000;
+	--bird-size: 25;
+	background-image: url("../imgs/bird.png");
+	background-size: cover;
+	position: absolute;
+
+	width: calc(var(--bird-size) * 2.2px);
+	height: calc(var(--bird-size) * 1px);
+
+	left: calc(var(--bird-size) * 1px);
+	top: calc(var(--bird-top) * 1px);
+}
+
+.pipe {
+	//   --pipe-width: 120;
+	//   --pipe-left: 100;
+	//   --hole-top: 500;
+	//   --hole-height: 120;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: calc(var(--pipe-width) * 1px);
+	left: calc(var(--pipe-left) * 1px);
+}
+.pipe > .segment {
+	--pipe-color: hsl(300, 75%, 75%);
+	position: absolute;
+	width: 100%;
+	background-color: var(--pipe-color);
+}
+.pipe > .top {
+	top: 0;
+	bottom: calc(var(--hole-top) * 1px);
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
+.pipe > .bottom {
+	top: calc(100vh - (var(--hole-top) * 1px) + calc(var(--hole-height) * 1px));
+	bottom: 0;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}

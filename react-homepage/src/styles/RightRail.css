@@ -1,0 +1,39 @@
+.today {
+	font-size: 0.8rem;
+}
+
+.quote-box {
+	background: var(--blue);
+	color: white;
+}
+.quote-box .quote {
+	padding: 0 1rem;
+}
+.quote-box .quote .text {
+	font-style: italic;
+}
+.quote-box .quote .author {
+	padding: 0.3rem 0;
+	text-align: right;
+}
+.right-side {
+	background: var(--ocean);
+	padding: 1rem;
+}
+.right-side .box {
+	padding: 1rem;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.right-side .box .heading {
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.5rem 0;
+}
+.right-side .cat-box {
+	background: var(--sage);
+	color: var(--light-gray);
+}

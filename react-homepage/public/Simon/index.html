@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Simon</title>
+</head>
+
+<body>
+    <main class="main">
+
+        <section class="game">
+
+            <div class="controls">
+                <h2>Simon</h2>
+                <div>
+                    <button class="btn start">Start</button>
+                    <button class="btn stop">Stop</button>
+                </div>
+            </div>
+            <div class="lights">
+                <div class="green disable">
+                    <audio class="sound" src="./sounds/kick-vinyl01.wav"></audio>
+                </div>
+                <div class="red disable">
+                    <audio class="sound" src="./sounds/shaker-shuffle.wav"></audio>
+                </div>
+                <div class="yellow disable">
+                    <audio class="sound" src="./sounds/clap-808.wav"></audio>
+                </div>
+                <div class="blue disable">
+                    <audio class="sound" src="sounds/ride-acoustic01.wav"></audio>
+                </div>
+            </div>
+
+        </section>
+        <section class="notes">
+            <h2>
+                User Notes
+            </h2>
+            <div class="sequence-num">
+                <h3>Number of colors in sequence -> <span class="num">0</span></h3>
+            </div>
+            <div class="list">
+                <h3>Colors Clicked</h3>
+                <div class="colors"></div>
+            </div>
+            <div class="message">
+                <div class="correct hidden">
+                    <div>Correct!</div>
+                </div>
+                <div class="incorrect hidden">
+                    <div> That's incorrect.</div>
+                    <div class="replay"> Replay sequence?
+                        <button class="btn replay">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./app.js"></script>
+</body>
+
+</html>

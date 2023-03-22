@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+
+body {
+  background: #212221;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Ranchers", cursive;
+  font-size: 3rem;
+  color: #ddedf4;
+}
+
+header div {
+  font-size: 1.7rem;
+  color: white;
+  display: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.play-btn {
+  font-family: "Ranchers", cursive;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  background: #44449b;
+  color: #ddedf4;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.play-btn:hover {
+  background: #9f9ff6;
+  color: #212221;
+}
+
+.board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.9rem;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.cat {
+  background: #212221;
+  color: #ddedf4;
+  text-align: center;
+}
+
+.cat-header {
+  background: #44449b;
+  color: #ddedf4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ddedf4;
+  width: 10rem;
+  height: 3rem;
+  text-transform: capitalize;
+}
+
+.clue-container {
+  width: 10rem;
+  height: 7rem;
+  border: 1px solid #ddedf4;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  position: relative;
+}
+
+.clue {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.clue-front,
+.clue-back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.clue-front:hover {
+  background: #15a3e1;
+}
+
+.clue-front {
+  background: #1181b2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+}
+
+.clue-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #c0d4db;
+  color: #212221;
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  overflow-y: auto;
+  line-height: 1rem;
+}
+
+.ans-btn {
+  width: auto;
+  cursor: pointer;
+  color: #44449b;
+  border: none;
+  padding: 0rem 0.5rem;
+  background: none;
+  font-size: 0.8rem;
+}
+
+.ans-btn:hover {
+  text-decoration: underline;
+}
+
+.cat-select {
+  display: none;
+}
+
+.answer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+}
+/*# sourceMappingURL=style.css.map */

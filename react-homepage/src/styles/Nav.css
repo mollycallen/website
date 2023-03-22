@@ -1,0 +1,62 @@
+.top-nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.top-nav a {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1rem;
+	color: #888;
+}
+.top-nav a:hover {
+	text-decoration: underline;
+	color: #333;
+}
+.top-nav .menu {
+	font-size: 3rem;
+}
+.left-menu-container {
+	position: relative;
+}
+#left-nav {
+	display: flex;
+	flex-direction: column;
+	transition: all ease 0.5s;
+	position: absolute;
+	left: -1rem;
+	top: 1.5rem;
+	z-index: 2;
+	background: var(--dark);
+
+	width: 0;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+#left-nav .menu-item {
+	padding: 1rem;
+	border-bottom: 1px solid var(--blue);
+}
+#left-nav .menu-link {
+	color: var(--gray);
+	padding: 1rem;
+	border-bottom: 1px solid var(--blue);
+	text-decoration: none;
+}
+
+#left-nav .menu-link:hover {
+	color: white;
+	font-weight: 600;
+}
+#left-nav .close-btn {
+	color: var(--gray);
+	font-size: 1rem;
+}
+#left-nav .close-btn:hover {
+	color: white;
+	font-weight: 600;
+}

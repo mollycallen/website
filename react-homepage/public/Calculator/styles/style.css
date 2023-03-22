@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calc-container {
+  min-width: 400px;
+  max-width: 50rem;
+  margin: 2rem;
+  border: 3px solid #373838;
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 4px 5px 15px -5px #000000;
+  box-shadow: 4px 5px 15px -5px #000000;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
+  grid-auto-rows: auto;
+  gap: 0.5rem 0.5rem;
+}
+
+.btn {
+  color: black;
+  background: #aec3b0;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.operator {
+  background: #598392;
+}
+
+.answer {
+  background: #d4d4d4;
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  text-align: right;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.seven {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.eight {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.nine {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.pos-neg {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.clear-element {
+  -ms-grid-column: 5;
+  grid-column: 5;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  background: #124559;
+  color: white;
+}
+
+.four {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.five {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.six {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.multiply {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.divid {
+  -ms-grid-column: 5;
+  grid-column: 5;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.one {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+.two {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+.three {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+.subtract {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+.equal {
+  -ms-grid-column: 5;
+  grid-column: 5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4/6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #373838;
+  color: white;
+}
+
+.clear {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 5;
+  grid-row: 5;
+  background: #124559;
+  color: white;
+}
+
+.zero {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+.decimal {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+.add {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+.disable {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.eq-operator {
+  padding: 0rem 0.5rem;
+  color: maroon;
+}
+
+.number:hover,
+.sign:hover,
+.decimal:hover {
+  background: white;
+  -webkit-box-shadow: inset 0 0 0 5px #aec3b0;
+          box-shadow: inset 0 0 0 5px #aec3b0;
+}
+
+.operator:hover {
+  background: white;
+  -webkit-box-shadow: inset 0 0 0 5px #598392;
+          box-shadow: inset 0 0 0 5px #598392;
+}
+
+.clear-element:hover,
+.clear:hover {
+  background: white;
+  color: black;
+  -webkit-box-shadow: inset 0 0 0 5px #124559;
+          box-shadow: inset 0 0 0 5px #124559;
+}
+
+.equal:hover {
+  background: #d4d4d4;
+  color: black;
+  -webkit-box-shadow: inset 0 0 0 5px #373838;
+          box-shadow: inset 0 0 0 5px #373838;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background: #98c1d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  margin: auto;
+  max-width: 50rem;
+  border: 2px solid black;
+  margin: 1rem 1rem;
+  border-radius: 4px;
+}
+
+.game-header {
+  font-family: "Bungee Inline", cursive;
+  font-size: 3rem;
+  color: #293241;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.game-main {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+      grid-template-areas: "board scoreboard";
+  padding: 1rem;
+}
+
+.board {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: board;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  row-gap: 0;
+  -webkit-box-shadow: 6px 7px 11px -1px rgba(0, 0, 0, 0.54);
+          box-shadow: 6px 7px 11px -1px rgba(0, 0, 0, 0.54);
+}
+
+.cell {
+  min-width: 2rem;
+  min-height: 6rem;
+  font-family: "Bungee Inline", cursive;
+  background: white;
+  font-size: 2rem;
+  pointer-events: none;
+  cursor: not-allowed;
+  border: 2px solid #293241;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.x-win {
+  background: #269b8f;
+  color: white;
+}
+
+.o-win {
+  background: #df8b16;
+  color: white;
+}
+
+.cell.available {
+  pointer-events: auto;
+  cursor: pointer;
+  background: white;
+}
+
+.available:hover {
+  background: #e7e6e3;
+}
+
+.scoreboard {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: scoreboard;
+  margin-left: 2rem;
+  background: white;
+  font-size: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr 1fr 1fr auto;
+      grid-template-rows: auto 1fr 1fr 1fr auto;
+      grid-template-areas: "header-area" "player-score" "computer-score" "draw-score" "play-btn";
+}
+
+.score-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header-area;
+  background: #293241;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.score-container.player {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: player-score;
+}
+
+.score-container.computer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: computer-score;
+}
+
+.score-container.draw {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: draw-score;
+}
+
+.play-btn {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: play-btn;
+}
+
+.score-container {
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #293241;
+}
+
+.score-container .score {
+  padding: 0 0.5rem;
+}
+
+.score-container .d,
+.score-container .x,
+.score-container .o {
+  display: block;
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  color: #269b8f;
+  font-family: "Bungee Inline", cursive;
+}
+
+.score-container .o {
+  color: #df8b16;
+}
+
+.score-container .d {
+  opacity: 0;
+}
+
+.play-btn {
+  cursor: pointer;
+  background: #3d5a80;
+  color: white;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  padding: 1rem;
+  border: none;
+  width: 100%;
+}
+
+.play-btn:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.highlight {
+  background: #e7e6e3;
+}
+
+.x-select {
+  color: #269b8f;
+  cursor: not-allowed;
+}
+
+.o-select {
+  color: #df8b16;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  body {
+    background: #333;
+  }
+  .game-header {
+    font-size: 2.5rem;
+    color: white;
+  }
+  .game-main {
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "board" "scoreboard";
+    padding: 1rem;
+  }
+  .board {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .scoreboard {
+    background: #ccc;
+    height: 8rem;
+    margin-left: 0;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: "player-score draw-score computer-score " "... play-btn ...";
+  }
+  .score-header {
+    display: none;
+  }
+  .play-btn {
+    padding: 0;
+    font-size: 1.2rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+  .score-container {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top: none;
+    justify-self: flex-start;
+  }
+  .score-container.computer {
+    justify-self: flex-end;
+  }
+  .cell {
+    min-width: 3rem;
+    min-height: 6rem;
+    font-size: 2rem;
+  }
+  .highlight {
+    background: inherit;
+  }
+}
+/*# sourceMappingURL=style.css.map */
