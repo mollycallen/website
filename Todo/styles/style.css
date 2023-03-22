@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+}
+
+.fa-star {
+  color: #bd0909;
+  cursor: pointer;
+}
+
+.fa-check-circle {
+  color: green;
+  cursor: pointer;
+}
+
+.fa-trash-alt {
+  color: darkblue;
+  cursor: pointer;
+}
+
+.fa-print {
+  font-size: 2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.todo-section {
+  background-repeat: repeat;
+  background-size: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 50rem;
+  overflow: auto;
+  margin: 1rem;
+}
+
+.todo-section header {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2rem;
+}
+
+.todo-form {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 2rem;
+  border: 3px solid gray;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.todo-form .add-button {
+  font-size: 1rem;
+  border: none;
+  background: #3f3e3e;
+  color: white;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-family: "Kaushan Script", cursive;
+  margin: 0rem 1rem;
+}
+
+.todo-form .add-button:hover {
+  color: #3f3e3e;
+  background: #d4d1d1;
+  border: 1px solid gray;
+}
+
+.todo-form label {
+  font-size: 1rem;
+}
+
+.todo-form .input-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.todo-form .todo-input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid gray;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.todo-form .todo-input:focus {
+  background: #d4d1d1;
+}
+
+.todo-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 3px solid gray;
+  border-radius: 0.5rem;
+  background: white;
+  width: 100%;
+  min-height: 6rem;
+}
+
+.todo-list .todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: white;
+  font-size: 1rem;
+  border-bottom: 1px solid gray;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 0.2rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.todo-list .todo:hover {
+  background: #e4e1e1;
+}
+
+.todo-list .todo-name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+}
+
+.todo-list .todo-date {
+  font-size: 1rem;
+  font-style: italic;
+  padding: 0rem 1.5rem;
+}
+
+.todo-list .todo i {
+  font-size: 1.5rem;
+  padding: 0rem 0.5rem;
+}
+
+.todo-list .empty {
+  font-family: "Kaushan Script", cursive;
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+.todo-list .remove {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  opacity: 0;
+}
+
+i.priority {
+  opacity: 0.3;
+}
+
+p.priority {
+  color: #bd0909;
+}
+
+i.checked {
+  opacity: 0.3;
+}
+
+p.checked {
+  -webkit-text-decoration: line-through solid green;
+          text-decoration: line-through solid green;
+  text-decoration-thickness: 2px;
+}
+
+@media screen and (max-width: 800) {
+  .todo-section {
+    width: 100vh;
+    height: 100vh;
+  }
+  header {
+    text-align: center;
+  }
+}
+
+@media print {
+  .todo-section {
+    width: 100%;
+  }
+  .todo-section header {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .todo-section .fa-print i {
+    display: none;
+  }
+  .todo {
+    font-size: 1rem;
+  }
+  .todo-form,
+  .todo i {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

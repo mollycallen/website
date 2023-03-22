@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-family: "Ubuntu Mono", monospace;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timer {
+	margin-top: 1rem;
+	padding: 1rem;
+	font-size: 1.5rem;
+	color: whitesmoke;
+	background: #0b3954;
+	box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.67);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: fit-content;
+}
+.time-settings {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.time {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 0.5rem;
+}
+
+.sound-settings {
+	font-size: 1rem;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	background: whitesmoke;
+	color: black;
+	border-radius: 1rem;
+	padding: 0.8rem;
+	margin: 0.5rem;
+}
+.sound {
+	padding: 0.7rem;
+}
+.sound label {
+	cursor: pointer;
+}
+.timer input {
+	font-size: 1rem;
+	text-align: center;
+	padding: 0.8rem;
+	border-radius: 1rem;
+}
+.timer input.readonly {
+	pointer-events: none;
+	background: #6999b4;
+}
+.sound input {
+	cursor: pointer;
+}
+.timer .buttons {
+	margin: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+}
+.timer button {
+	margin: 0.5rem;
+	font-size: 1rem;
+	border-radius: 2rem;
+	font-family: "Ubuntu Mono", monospace;
+	padding: 1rem 3rem;
+	color: whitesmoke;
+	cursor: pointer;
+}
+.buttons .start {
+	background: rgb(15, 99, 15);
+	border: 2px solid rgb(7, 43, 7);
+}
+.buttons .start:hover {
+	background: rgb(23, 136, 23);
+}
+.buttons .stop {
+	background: rgb(168, 27, 27);
+	border: 2px solid rgb(63, 7, 7);
+}
+.buttons .stop:hover {
+	background: rgb(248, 41, 41);
+}
+
+.buttons .reset {
+	background: rgb(123, 126, 123);
+	border: 2px solid rgb(39, 39, 39);
+}
+.buttons .reset:hover {
+	background: rgb(163, 163, 163);
+}

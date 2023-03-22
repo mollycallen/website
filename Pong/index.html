@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b6f38bb6b.js" crossorigin="anonymous"></script>
+    <script src="app.js" type="module" defer></script>
+    <title>Pong</title>
+</head>
+
+<body>
+
+    <div class="score">
+        <div class="player-score" id="player-score">0</div>
+        <div class="computer-score" id="computer-score">0</div>
+    </div>
+    <div class="level-div">
+
+        <p>Novice</p>
+        <input type="range" id="level" name="level" class="slider" min="1" max="5" value="3">
+
+        <p>Expert</p>
+    </div>
+
+
+
+    <div class="start-stop" id="start-stop"><button class="btn start-btn" id="start-btn"><i class="fa fa-play-circle-o"
+                aria-hidden="true"></i></button>
+        <button class="btn stop-btn" id="stop-btn"><i class="fa fa-pause-circle-o" aria-hidden="true"></i></button>
+    </div>
+    <div class="ball" id="ball"></div>
+    <div class="endzone left" id="player-endzone"></div>
+    <div class="paddle left" id="player-paddle"></div>
+    <div class="paddle right" id="computer-paddle"></div>
+    <div class="endzone right" id="computer-endzone"></div>
+
+</body>
+
+</html>

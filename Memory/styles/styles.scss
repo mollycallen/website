@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border: 2px solid black;
+	border-radius: 1rem;
+	background: white;
+	margin: 1rem;
+	padding: 1rem;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		357deg,
+		rgba(255, 255, 255, 1) 27%,
+		rgba(3, 47, 92, 1) 97%
+	);
+}
+.container header {
+	font-family: "Original Surfer", cursive;
+	font-size: 1.8rem;
+	margin-top: 1rem;
+	text-align: center;
+	color: #032f5c;
+	background: white;
+
+	border-radius: 1rem;
+	padding-top: 1rem;
+	margin-bottom: 1rem;
+}
+.controls {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	margin: 1rem auto;
+}
+
+.controls .heading {
+	font-size: 1rem;
+	font-weight: bold;
+	padding-bottom: 0.5rem;
+}
+.controls .level {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+.controls .level-desc {
+	font-size: 0.7rem;
+	display: flex;
+	justify-content: space-between;
+}
+.controls button {
+	font-family: "Original Surfer", cursive;
+	padding: 1rem;
+	font-size: 1rem;
+	background: #ddd;
+	color: #064789;
+	border: 2px solid #064789;
+	border-radius: 0.5rem;
+	font-weight: bold;
+}
+.controls button:hover {
+	color: white;
+	background: #064789;
+	border: 2px solid #064789;
+}
+.controls .score {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	font-size: 0.8rem;
+}
+
+.card-grid {
+	width: 95%;
+	height: fit-content;
+	margin: auto;
+	display: grid;
+
+	justify-content: center;
+	gap: 1rem;
+}
+.card-container {
+	perspective: 800px;
+	position: relative;
+}
+.card {
+	background: rgb(45, 73, 134);
+	border-radius: 1rem;
+	min-width: 100px;
+	min-height: 100px;
+	position: absolute;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	transform-origin: 50% 50%;
+}
+.card .front,
+.card .back {
+	width: 100px;
+	height: 100px;
+	border: 2px solid black;
+	border-radius: 1rem;
+	backface-visibility: hidden;
+	position: absolute;
+}
+.card .front {
+	background: #f18f01;
+}
+.card .back {
+	transform: rotateY(180deg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.card .front:hover {
+	background: #edae49;
+}
+
+.flipped {
+	transform: rotateY(180deg);
+}
+
+.kudos {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	padding: 1rem;
+	text-align: center;
+	font-size: 0.8rem;
+	position: absolute;
+	border-radius: 1rem;
+	border: 2px solid black;
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}

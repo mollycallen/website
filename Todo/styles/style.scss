@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Nunito", sans-serif;
+}
+
+.fa-star {
+	color: rgb(189, 9, 9);
+	cursor: pointer;
+}
+.fa-check-circle {
+	color: green;
+	cursor: pointer;
+}
+.fa-trash-alt {
+	color: darkblue;
+	cursor: pointer;
+}
+.fa-print {
+	font-size: 2rem;
+	align-self: flex-end;
+	padding: 1rem;
+	cursor: pointer;
+}
+.todo-section {
+	background-repeat: repeat;
+	background-size: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	max-width: 50rem;
+	overflow: auto;
+	margin: 1rem;
+
+	header {
+		font-family: "Kaushan Script", cursive;
+		font-size: 2rem;
+	}
+}
+.todo-form {
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 2rem;
+	border: 3px solid gray;
+	background: white;
+	border-radius: 0.5rem;
+	padding: 1rem;
+
+	.add-button {
+		font-size: 1rem;
+		border: none;
+		background: rgb(63, 62, 62);
+		color: white;
+		padding: 0.5rem 2rem;
+		cursor: pointer;
+		border-radius: 0.5rem;
+		font-family: "Kaushan Script", cursive;
+		margin: 0rem 1rem;
+	}
+	.add-button:hover {
+		color: rgb(63, 62, 62);
+		background: rgb(212, 209, 209);
+		border: 1px solid gray;
+	}
+	label {
+		font-size: 1rem;
+	}
+
+	.input-div {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.todo-input {
+		padding: 0.5rem;
+		font-size: 1.2rem;
+		border: 1px solid gray;
+		width: 100%;
+		border-radius: 0.5rem;
+	}
+	.todo-input:focus {
+		background: rgb(212, 209, 209);
+	}
+}
+.todo-list {
+	display: flex;
+	flex-direction: column;
+	border: 3px solid gray;
+	border-radius: 0.5rem;
+	background: white;
+	width: 100%;
+	min-height: 6rem;
+
+	.todo {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background: white;
+		font-size: 1rem;
+		border-bottom: 1px solid gray;
+		padding: 0.5rem 0.5rem;
+		margin-bottom: 0.2rem;
+		transition: all 0.5s ease;
+	}
+	.todo:hover {
+		background: rgb(228, 225, 225);
+	}
+	.todo-name {
+		flex: 1 1 20rem;
+	}
+	.todo-date {
+		font-size: 1rem;
+		font-style: italic;
+		padding: 0rem 1.5rem;
+	}
+	.todo i {
+		font-size: 1.5rem;
+		padding: 0rem 0.5rem;
+	}
+
+	.empty {
+		font-family: "Kaushan Script", cursive;
+		font-size: 1rem;
+		text-align: center;
+		opacity: 0.8;
+		margin-top: 1rem;
+	}
+	.remove {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+}
+
+i.priority {
+	opacity: 0.3;
+}
+
+p.priority {
+	color: rgb(189, 9, 9);
+}
+
+i.checked {
+	opacity: 0.3;
+}
+
+p.checked {
+	text-decoration: line-through solid green;
+	text-decoration-thickness: 2px;
+}
+
+@media screen and (max-width: 800) {
+	.todo-section {
+		width: 100vh;
+		height: 100vh;
+	}
+	header {
+		text-align: center;
+	}
+}
+
+@media print {
+	.todo-section {
+		width: 100%;
+
+		header {
+			font-size: 2rem;
+			padding: 1rem;
+		}
+		.fa-print i {
+			display: none;
+		}
+	}
+	.todo {
+		font-size: 1rem;
+	}
+
+	.todo-form,
+	.todo i {
+		display: none;
+	}
+}

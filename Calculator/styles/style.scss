@@ -1,0 +1,172 @@
+$beige: #d4d4d4;
+$cambridge: #aec3b0;
+$teal: #598392;
+$midnight: #124559;
+$black: #373838;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Mukta", sans-serif;
+}
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.calc-container {
+	min-width: 400px;
+	max-width: 50rem;
+	margin: 2rem;
+	border: 3px solid $black;
+	background: white;
+	padding: 1rem;
+	border-radius: 1rem;
+	-webkit-box-shadow: 4px 5px 15px -5px #000000;
+	box-shadow: 4px 5px 15px -5px #000000;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	grid-auto-rows: auto;
+	gap: 0.5rem 0.5rem;
+}
+.btn {
+	color: black;
+	background: $cambridge;
+	border-radius: 1rem;
+	font-size: 1.5rem;
+	text-align: center;
+	cursor: pointer;
+}
+.operator {
+	background: $teal;
+}
+.answer {
+	background: $beige;
+	border-radius: 1rem;
+	font-size: 2rem;
+	padding: 0.5rem 1rem;
+	text-align: right;
+	grid-column: 1/6;
+	grid-row: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	overflow: hidden;
+}
+
+.seven {
+	grid-column: 1;
+	grid-row: 2;
+}
+.eight {
+	grid-column: 2;
+	grid-row: 2;
+}
+.nine {
+	grid-column: 3;
+	grid-row: 2;
+}
+.pos-neg {
+	grid-column: 4;
+	grid-row: 2;
+}
+.clear-element {
+	grid-column: 5;
+	grid-row: 2;
+	background: $midnight;
+	color: white;
+}
+.four {
+	grid-column: 1;
+	grid-row: 3;
+}
+.five {
+	grid-column: 2;
+	grid-row: 3;
+}
+.six {
+	grid-column: 3;
+	grid-row: 3;
+}
+.multiply {
+	grid-column: 4;
+	grid-row: 3;
+}
+.divid {
+	grid-column: 5;
+	grid-row: 3;
+}
+.one {
+	grid-column: 1;
+	grid-row: 4;
+}
+.two {
+	grid-column: 2;
+	grid-row: 4;
+}
+.three {
+	grid-column: 3;
+	grid-row: 4;
+}
+.subtract {
+	grid-column: 4;
+	grid-row: 4;
+}
+.equal {
+	grid-column: 5;
+	grid-row: 4/6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $black;
+	color: white;
+}
+.clear {
+	grid-column: 1;
+	grid-row: 5;
+	background: $midnight;
+	color: white;
+}
+.zero {
+	grid-column: 2;
+	grid-row: 5;
+}
+.decimal {
+	grid-column: 3;
+	grid-row: 5;
+}
+.add {
+	grid-column: 4;
+	grid-row: 5;
+}
+
+.disable {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+.eq-operator {
+	padding: 0rem 0.5rem;
+	color: maroon;
+}
+.number:hover,
+.sign:hover,
+.decimal:hover {
+	background: white;
+	box-shadow: inset 0 0 0 5px $cambridge;
+}
+.operator:hover {
+	background: white;
+	box-shadow: inset 0 0 0 5px $teal;
+}
+.clear-element:hover,
+.clear:hover {
+	background: white;
+	color: black;
+	box-shadow: inset 0 0 0 5px $midnight;
+}
+.equal:hover {
+	background: $beige;
+	color: black;
+	box-shadow: inset 0 0 0 5px $black;
+}
