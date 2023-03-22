@@ -1,0 +1,47 @@
+.tools {
+	background: white;
+	margin: 1rem;
+	position: relative;
+	display: flex;
+	min-height: 500px;
+}
+.tools .tool-area {
+	width: 100%;
+	display: flex;
+	justify-self: center;
+	align-items: flex-end;
+	background: var(--gray);
+}
+.tools .tool-area iframe {
+	margin-top: 2rem;
+	height: 95%;
+	width: 100%;
+	border: none;
+}
+.tools .tools-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	background: var(--sage);
+	width: fit-content;
+	color: white;
+}
+.tools .tools-menu .tool {
+	padding: 1rem 2rem;
+}
+.tools .tools-menu .tool:hover {
+	background: var(--blue);
+	font-weight: bold;
+}
+.tools .tools-menu button {
+	border: none;
+	outline: none;
+	background: inherit;
+	color: inherit;
+	font-size: 1rem;
+}
+
+.tools .tools-menu .active {
+	background: var(--blue);
+	font-weight: bold;
+}

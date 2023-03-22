@@ -1,0 +1,244 @@
+$user-color: #269b8f;
+$computer-color: #df8b16;
+$light-color: #e7e6e3;
+$dark-blue: #3d5a80;
+$med-blue: #98c1d9;
+$dark-gray: #293241;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+.container {
+	background: $med-blue;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: no-wrap;
+	margin: auto;
+	max-width: 50rem;
+	border: 2px solid black;
+	margin: 1rem 1rem;
+	border-radius: 4px;
+}
+
+.game-header {
+	font-family: "Bungee Inline", cursive;
+	font-size: 3rem;
+	color: $dark-gray;
+	display: flex;
+	flex-wrap: nowrap;
+}
+.game-main {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-areas: "board scoreboard";
+	padding: 1rem;
+}
+.board {
+	grid-area: board;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	align-content: center;
+	grid-template-columns: 1fr 1fr 1fr;
+	// grid-auto-rows: 9rem;
+	// grid-auto-columns: 7rem;
+	column-gap: 0;
+	row-gap: 0;
+	box-shadow: 6px 7px 11px -1px rgba(0, 0, 0, 0.54);
+}
+.cell {
+	min-width: 2rem;
+	min-height: 6rem;
+	font-family: "Bungee Inline", cursive;
+	background: white;
+	font-size: 2rem;
+	pointer-events: none;
+	cursor: not-allowed;
+	border: 2px solid $dark-gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.x-win {
+	background: $user-color;
+	color: white;
+}
+.o-win {
+	background: $computer-color;
+	color: white;
+}
+.cell.available {
+	pointer-events: auto;
+	cursor: pointer;
+	background: white;
+}
+.available:hover {
+	background: $light-color;
+}
+
+.scoreboard {
+	grid-area: scoreboard;
+	margin-left: 2rem;
+	background: white;
+	font-size: 1rem;
+	display: grid;
+	grid-template-rows: auto 1fr 1fr 1fr auto;
+	grid-template-areas:
+		"header-area"
+		"player-score"
+		"computer-score"
+		"draw-score"
+		"play-btn";
+}
+.score-header {
+	grid-area: header-area;
+	background: $dark-gray;
+	color: white;
+	padding: 1rem;
+	text-align: center;
+}
+.score-container.player {
+	grid-area: player-score;
+}
+.score-container.computer {
+	grid-area: computer-score;
+}
+.score-container.draw {
+	grid-area: draw-score;
+}
+.play-btn {
+	grid-area: play-btn;
+}
+.score-container {
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	border-top: 1px solid $dark-gray;
+
+	.score {
+		padding: 0 0.5rem;
+	}
+	.d,
+	.x,
+	.o {
+		display: block;
+		padding-right: 1rem;
+		font-size: 1.2rem;
+		color: $user-color;
+		font-family: "Bungee Inline", cursive;
+	}
+	.o {
+		color: $computer-color;
+	}
+	.d {
+		opacity: 0;
+	}
+}
+
+.play-btn {
+	cursor: pointer;
+	background: $dark-blue;
+	color: white;
+	font-size: 1rem;
+	font-family: "Roboto", sans-serif;
+	padding: 1rem;
+	border: none;
+	width: 100%;
+}
+
+.play-btn:hover {
+	text-decoration: underline;
+	opacity: 0.8;
+}
+
+.highlight {
+	background: $light-color;
+}
+.x-select {
+	color: $user-color;
+	cursor: not-allowed;
+}
+.o-select {
+	color: $computer-color;
+	cursor: not-allowed;
+}
+
+// --------------------------------
+//  media query for small screens
+// --------------------------------
+
+@media (max-width: 600px) {
+	body {
+		background: #333;
+	}
+	.game-header {
+		font-size: 2.5rem;
+		color: white;
+	}
+
+	.game-main {
+		margin: auto;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			"board"
+			"scoreboard";
+		padding: 1rem;
+	}
+	.board {
+		box-shadow: none;
+	}
+	.scoreboard {
+		background: #ccc;
+		height: 8rem;
+		margin-left: 0;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: auto auto auto;
+		grid-template-areas:
+			"player-score draw-score computer-score "
+			"... play-btn ...";
+	}
+
+	.score-header {
+		display: none;
+	}
+	.play-btn {
+		padding: 0;
+		font-size: 1.2rem;
+		grid-column: 1/4;
+	}
+	.score-container {
+		font-size: 1rem;
+		padding: 0 0.5rem;
+		align-items: center;
+		border-top: none;
+		justify-self: flex-start;
+	}
+
+	.score-container.computer {
+		justify-self: flex-end;
+	}
+
+	.cell {
+		min-width: 3rem;
+		min-height: 6rem;
+		font-size: 2rem;
+	}
+	.highlight {
+		background: inherit;
+	}
+}

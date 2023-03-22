@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid black;
+  border-radius: 1rem;
+  background: white;
+  margin: 1rem;
+  padding: 1rem;
+  background: white;
+  background: linear-gradient(357deg, white 27%, #032f5c 97%);
+}
+
+.container header {
+  font-family: "Original Surfer", cursive;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: #032f5c;
+  background: white;
+  border-radius: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.controls .heading {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+.controls .level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.controls .level-desc {
+  font-size: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.controls button {
+  font-family: "Original Surfer", cursive;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #ddd;
+  color: #064789;
+  border: 2px solid #064789;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.controls button:hover {
+  color: white;
+  background: #064789;
+  border: 2px solid #064789;
+}
+
+.controls .score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 0.8rem;
+}
+
+.card-grid {
+  width: 95%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.card-container {
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  position: relative;
+}
+
+.card {
+  background: #2d4986;
+  border-radius: 1rem;
+  min-width: 100px;
+  min-height: 100px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.card .front,
+.card .back {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 1rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+}
+
+.card .front {
+  background: #f18f01;
+}
+
+.card .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card .front:hover {
+  background: #edae49;
+}
+
+.flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.kudos {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  position: absolute;
+  border-radius: 1rem;
+  border: 2px solid black;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+/*# sourceMappingURL=styles.css.map */

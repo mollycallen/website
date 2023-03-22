@@ -7,6 +7,7 @@
 	--gray: #e6e6e6;
 	--black: #333;
 	--light-gray: #eee;
+	--accent: rgb(247, 117, 57);
 }
 * {
 	margin: 0;
@@ -48,7 +49,8 @@ body {
 	flex: 1;
 }
 .main-container .left-side {
-	flex: 2.5;
+	flex: 3;
+	padding: 0.5rem;
 }
 .indent {
 	padding-left: 0.8rem;
@@ -104,28 +106,25 @@ body {
 .small-text {
 	font-size: 0.7rem;
 }
-.right-side {
-	background: var(--ocean);
-	padding: 1rem;
-}
-.right-side .box {
-	padding: 0.5rem;
-	border-radius: 3px;
-	display: flex;
-	flex-direction: column;
-	gap: 0.4rem;
-	margin-top: 0.5rem;
-}
 
-.right-side .box .heading {
-	font-size: 1rem;
-	font-weight: bold;
-	padding: 0.5rem 0;
-}
-.right-side .cat-box {
-	background: var(--sage);
-	color: var(--light-gray);
-}
 .icon {
 	padding-right: 0.5rem;
+}
+
+.spacer {
+	padding: 0 1rem;
+}
+.close-btn {
+	border: none;
+	outline: none;
+	background: inherit;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: var(--black);
+	font-weight: 600;
+	justify-self: flex-end;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.5rem;
 }

@@ -1,6 +1,6 @@
 import { useFetch } from '../hooks/UseFetch';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons"
+import { faQuoteLeft, } from "@fortawesome/free-solid-svg-icons"
 
 const Quote = () => {
 
@@ -18,7 +18,8 @@ const Quote = () => {
                     {isLoading && <p>loading...</p>}
                     {data &&
                         <div className='quote'>
-                            <div className='text'>"{data.content}"
+                            <div className='text'>
+                                {data.content}"
                             </div>
                             <div className='author'>... {data.author}</div>
                         </div>

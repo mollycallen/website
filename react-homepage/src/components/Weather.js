@@ -2,7 +2,8 @@ import { useFetch } from '../hooks/UseFetch';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { roundInteger } from './Helpers';
-import { faWind, faUmbrella, faMugHot, faThermometerHalf, faCloudSun, faSun, faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
+import { faWind, faUmbrella, faMugHot, faThermometerHalf, faCloudSun, faSun, faAdjust, faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
+import '../styles/Weather.css';
 
 
 const Weather = () => {
@@ -79,84 +80,102 @@ const Weather = () => {
                     <div className='weather-box box'>
 
                         <div className='heading'>
-                            <FontAwesomeIcon className='icon' icon={faCloudSun} ></FontAwesomeIcon>
-                            Currently in {cityName}...<br></br><span className='small-text'>{cityName2}</span>
+
+                            Weather in {cityName}...<br></br><span className='small-text'>{cityName2}</span>
                         </div>
                         {isLoading ? <p>Loading Weather data...</p> :
                             <div className='weather-details'>
-                                <div className="sub ">
-                                    <p className='big-text standout'>
+                                <div className="sub subgroup">
+                                    <div className='big-text standout'>
                                         {data.current_weather.temperature}&deg;
-                                    </p>
-                                    <p className='small-text'>
-                                        Feels like <span className='standout med-text'>{data.hourly.apparent_temperature[0]}&deg;</span>
-                                    </p>
-                                </div>
-                                <div className='sub weather-desc'>
-                                    <p>{CODES[data.current_weather.weathercode]}</p>
-                                </div>
-                                <div className="sub">
-                                    <div className='icon'>
-                                        <FontAwesomeIcon icon={faThermometerHalf}></FontAwesomeIcon>
                                     </div>
-                                    <div>
-                                        <p className="title"> High / Low </p>
-                                        <p className='small-text'>
-                                            {data.daily.temperature_2m_max[0]}&deg;
-                                            &nbsp;/&nbsp;
-                                            {data.daily.temperature_2m_min[0]}&deg;
-                                        </p>
+                                    <div className='weather-desc standout '>
+                                        <p>{CODES[data.current_weather.weathercode]}</p>
                                     </div>
                                 </div>
-                                <div className="sub">
-                                    <div className='icon'>
-                                        <FontAwesomeIcon icon={faWind} ></FontAwesomeIcon>
+
+                                <div className="grid">
+                                    <div className="sub">
+                                        <div className='icon'>
+                                            <FontAwesomeIcon icon={faThermometerHalf}></FontAwesomeIcon>
+                                        </div>
+                                        <div>
+                                            <p className="title"> High / Low </p>
+                                            <p className='small-text'>
+                                                {data.daily.temperature_2m_max[0]}&deg;
+                                                &nbsp;/&nbsp;
+                                                {data.daily.temperature_2m_min[0]}&deg;
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className="title">Wind</p>
-                                        <p className='small-text'>{data.current_weather.windspeed} mph
-                                        </p>
+                                    <div className="sub">
+                                        <div className='icon'>
+                                            <FontAwesomeIcon icon={faWind} ></FontAwesomeIcon>
+                                        </div>
+                                        <div>
+                                            <p className="title">Wind</p>
+                                            <p className='small-text'>{data.current_weather.windspeed} mph
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="sub">
-                                    <div className='icon'>
-                                        <FontAwesomeIcon icon={faUmbrella}></FontAwesomeIcon>
+                                    <div className="sub">
+                                        <div className='icon'>
+                                            <FontAwesomeIcon icon={faUmbrella}></FontAwesomeIcon>
+                                        </div>
+                                        <div>
+                                            <p className="title">precipitation</p>
+                                            <p className='small-text'>
+                                                {data.hourly.precipitation_probability[0]}%
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className="title">precipitation</p>
-                                        <p className='small-text'>
-                                            {data.hourly.precipitation_probability[0]}%
-                                        </p>
+                                    <div className='sub'>
+                                        <div className='icon'>
+                                            <FontAwesomeIcon icon={faMugHot} ></FontAwesomeIcon>
+                                        </div>
+                                        <div>
+                                            <p className='title'>Humidity</p>
+                                            <p className='small-text'>{data.hourly.relativehumidity_2m[0]}%</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='sub'>
-                                    <div className='icon'>
-                                        <FontAwesomeIcon icon={faMugHot} ></FontAwesomeIcon>
+                                    <div className='sub'>
+                                        <div className='icon'>
+                                            <FontAwesomeIcon icon={faSun} ></FontAwesomeIcon>
+                                        </div>
+                                        <div>
+                                            <p className='title'>UV Index</p>
+                                            <p className='small-text'>{data.daily.uv_index_max[0]} of 10 </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className='title'>Humidity</p>
-                                        <p className='small-text'>{data.hourly.relativehumidity_2m[0]}%</p>
-                                    </div>
-                                </div>
-                                <div className='sub'>
-                                    <div className='icon'>
-                                        <FontAwesomeIcon icon={faSun} ></FontAwesomeIcon>
-                                    </div>
-                                    <div>
-                                        <p className='title'>UV Index</p>
-                                        <p className='small-text'>{data.daily.uv_index_max[0]}</p>
+                                    <div className='sub'>
+                                        <div className='icon'>
+                                            <FontAwesomeIcon icon={faAdjust} ></FontAwesomeIcon>
+                                        </div>
+                                        <div>
+                                            <p className='title'>Sunrise / Sunset</p>
+                                            <p className='small-text'>{new Date(data.daily.sunrise[0]).toLocaleTimeString("en-US", {
+                                                hour: "numeric",
+                                                minute: "2-digit",
+                                                hour12: true
+                                            })} / {new Date(data.daily.sunset[0]).toLocaleTimeString("en-US", {
+                                                hour: "numeric",
+                                                minute: "2-digit",
+                                                hour12: true
+                                            })} </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         }
                         <div className='btn-div'>
                             <button className='btn' onClick={changeCoordinates} >
+                                <FontAwesomeIcon className='icon' icon={faCloudSun} ></FontAwesomeIcon>
                                 Get Your Weather&nbsp;
                                 <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
                             </button>
                         </div>
 
-                        <div className='credit'>Weather data from <a href="https://open-meteo.com/" target='_blank' rel='noreferrer'>Open-Meteo.com</a></div>
+                        <div className='credit'>Data from <a href="https://open-meteo.com/" target='_blank' rel='noreferrer'>Open-Meteo.com</a></div>
                     </div>
 
                 </div>

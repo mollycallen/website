@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useFetch } from '../hooks/UseFetch';
 import { faCat, faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../styles/Cat.css';
 
 const Cat = () => {
 
@@ -26,7 +27,7 @@ const Cat = () => {
     return (
         <div className='box cat-box'>
             <div className='heading'>
-                <FontAwesomeIcon className='icon' icon={faCat}></FontAwesomeIcon>
+
                 Random Cat Facts...
             </div>
             <div className='cat-fact'>
@@ -40,6 +41,7 @@ const Cat = () => {
                 {(count < 10) &&
                     <div className='btn-div'>
                         <button className='btn' onClick={getAnotherFact}>
+                            <FontAwesomeIcon className='icon' icon={faCat}></FontAwesomeIcon>
                             Get Another Fact
                             &nbsp;
                             <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon></button>

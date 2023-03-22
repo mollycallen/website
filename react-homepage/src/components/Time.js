@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import '../styles/Time.css'
 
 const Time = () => {
     const [day, setDay] = useState('');
@@ -8,7 +9,6 @@ const Time = () => {
         let today = new Date();
 
         const updateTime = () => {
-            console.log("updating time")
             let now = new Date()
             let t = now.toLocaleTimeString("en-US", {
                 hour: "numeric",
@@ -33,7 +33,6 @@ const Time = () => {
             }));
         updateTime();
         startTimeUpdate();
-        console.log("useEffect")
     }, []);
 
     return (

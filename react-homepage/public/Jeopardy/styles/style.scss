@@ -1,0 +1,147 @@
+$dark: #212221;
+$purple: #44449b;
+$light-purple: #9f9ff6;
+$light: #ddedf4;
+$medium-blue: #1181b2;
+$light-blue: #15a3e1;
+$accent: #9b9b44;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Mukta", sans-serif;
+}
+body {
+	background: $dark;
+}
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Ranchers", cursive;
+	font-size: 3rem;
+	color: $light;
+
+	div {
+		font-size: 1.7rem;
+		color: white;
+		display: none;
+	}
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.play-btn {
+	font-family: "Ranchers", cursive;
+	margin: 2rem;
+	padding: 1rem 2rem;
+	background: $purple;
+	color: $light;
+	font-size: 1.2rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+.play-btn:hover {
+	background: $light-purple;
+	color: $dark;
+}
+
+.board {
+	display: flex;
+	font-size: 0.9rem;
+	pointer-events: none;
+	opacity: 0.2;
+}
+.active {
+	pointer-events: all;
+	opacity: 1;
+}
+.cat {
+	background: $dark;
+	color: $light;
+	text-align: center;
+}
+.cat-header {
+	background: $purple;
+	color: $light;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid $light;
+	width: 10rem;
+	height: 3rem;
+	text-transform: capitalize;
+}
+.clue-container {
+	width: 10rem;
+	height: 7rem;
+	border: 1px solid $light;
+	perspective: 800px;
+	position: relative;
+}
+.clue {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	transform-origin: 50% 50%;
+}
+
+.clue-front,
+.clue-back {
+	backface-visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.flipped {
+	transform: rotateY(180deg);
+}
+.clue-front:hover {
+	background: $light-blue;
+}
+.clue-front {
+	background: $medium-blue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+}
+.clue-back {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: rgb(192, 212, 219);
+	color: $dark;
+	font-size: 0.8rem;
+	padding: 0.2rem;
+	transform: rotateY(180deg);
+	overflow-y: auto;
+	line-height: 1rem;
+}
+
+.ans-btn {
+	width: auto;
+	cursor: pointer;
+	color: $purple;
+	border: none;
+	padding: 0rem 0.5rem;
+	background: none;
+	font-size: 0.8rem;
+}
+.ans-btn:hover {
+	text-decoration: underline;
+}
+.cat-select {
+	display: none;
+}
+.answer-container {
+	display: flex;
+	gap: 2px;
+}

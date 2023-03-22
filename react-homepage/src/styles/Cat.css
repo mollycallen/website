@@ -1,0 +1,16 @@
+.cat-fact {
+	height: fit-content;
+	min-height: 5.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.cat-fact ul {
+	padding-left: 2rem;
+}
+.cat-fact ul li {
+	padding-bottom: 0.5rem;
+}
+.cat-fact button {
+	justify-self: flex-end;
+}

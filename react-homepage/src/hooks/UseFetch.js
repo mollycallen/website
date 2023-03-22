@@ -4,7 +4,7 @@ export function useFetch(url, options) {
 
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [errorMessage, setErrorMessage] = useState(null);
 
     useEffect(() => {
         if (!url) return;
@@ -19,9 +19,10 @@ export function useFetch(url, options) {
                 const jsonData = await res.json();
                 setData(jsonData);
                 setIsLoading(false);
-                setError(null)
+                setErrorMessage(null)
             } catch (error) {
-                setError(error.message);
+                setErrorMessage(error);
+                console.log('useFetch error: ', error)
             } finally {
                 setIsLoading(false);
             }
@@ -30,5 +31,5 @@ export function useFetch(url, options) {
 
     }, [url, options])
 
-    return { data, isLoading, error };
+    return { data, isLoading, errorMessage };
 }

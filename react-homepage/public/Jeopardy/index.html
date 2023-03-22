@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <script src="https://kit.fontawesome.com/4b6f38bb6b.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet" />
+  <title>Jeopardy</title>
+</head>
+
+<body>
+  <header>
+    Jeopardy
+    <button class="play-btn">Let's Play!</button>
+    <div id="loading-div">Loading <i class="fas fa-spinner fa-pulse"></i></div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="board">
+        <div class="cat cat1">
+          <div class="cat-header">Category</div>
+          <div class="clue-container">
+            <div class="clue clue1">
+              <div class="clue-front">$100</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <div class=" answer-container">
+                  <button class="ans-btn">Answer: </button>
+                  <div class="answer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue2">
+              <div class="clue-front">$200</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue3">
+              <div class="clue-front">$300</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue4">
+              <div class="clue-front">$400</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue5">
+              <div class="clue-front">$500</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cat cat2">
+          <div class="cat-header">Category</div>
+
+          <div class="clue-container">
+            <div class="clue clue1">
+              <div class="clue-front">$100</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue2">
+              <div class="clue-front">$200</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue3">
+              <div class="clue-front">$300</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue4">
+              <div class="clue-front">$400</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clue-container">
+            <div class="clue clue5">
+              <div class="clue-front">$500</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat cat3">
+          <div class="cat-header">Category</div>
+          <div class="clue-container">
+            <div class="clue clue1">
+              <div class="clue-front">$100</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue2">
+              <div class="clue-front">$200</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue3">
+              <div class="clue-front">$300</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue4">
+              <div class="clue-front">$400</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue5">
+              <div class="clue-front">$500</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat cat4">
+          <div class="cat-header">Category</div>
+          <div class="clue-container">
+            <div class="clue clue1">
+              <div class="clue-front">$100</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue2">
+              <div class="clue-front">$200</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue3">
+              <div class="clue-front">$300</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue4">
+              <div class="clue-front">$400</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue5">
+              <div class="clue-front">$500</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cat cat5">
+          <div class="cat-header">Category</div>
+          <div class="clue-container">
+            <div class="clue clue1">
+              <div class="clue-front">$100</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue2">
+              <div class="clue-front">$200</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue3">
+              <div class="clue-front">$300</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue4">
+              <div class="clue-front">$400</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="clue-container">
+            <div class="clue clue5">
+              <div class="clue-front">$500</div>
+              <div class="clue-back">
+                <div class="question"></div>
+                <button class="ans-btn">Answer</button>
+                <div class="answer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Original+Surfer&display=swap"
+        rel="stylesheet">
+    <title>Animal Matching Game</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>Animal Matching Game
+
+            <div class="controls">
+                <div class="score">
+                    <div class="heading">Score:</div>
+                    <div>Number of Tries: <span class='tries'></span></div>
+                    <div>Minimum Possible: <span class="minimum"></span></div>
+                </div>
+                <div class="level">
+                    <label class="heading" for="level-input">Level of Difficulty:</label>
+                    <input type="range" id="level-input" name="level" value="4" min="4" max="10" step="2">
+                    <div class="level-desc">
+                        <label for="level-input">Easy</label>
+                        <label for="level-input">Hard</label>
+                    </div>
+                </div>
+                <button class="new-game">New Game</button>
+            </div>
+        </header>
+        <div class="card-grid">
+
+            <!-- <div class="card-container">
+                <div class="card">
+                    <div class="back"></div>
+                    <div class="front"></div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+    <div class="kudos"></div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

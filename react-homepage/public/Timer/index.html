@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Timer</title>
+</head>
+<script>
+    function leadingZeros(input) {
+        if (!isNaN(input.value) && input.value.length === 1) {
+            input.value = '0' + input.value;
+        }
+
+    }
+</script>
+
+<body>
+    <div class="container">
+        <div class="timer">
+            <div class="time-settings">
+                <div class="time">
+                    <label for="hours">Hours</label>
+                    <input type="number" value="00" name="hours" id="hours" min="0" max="12"
+                        onchange="leadingZeros(this)" onkeyup="leadingZeros(this)" onclick="leadingZeros(this)">
+                </div>
+                <div>&#58;</div>
+                <div class="time">
+                    <label for="minutes">Minutes</label>
+                    <input type="number" value="00" name="minutes" id="minutes" min="0" max="59"
+                        onchange="leadingZeros(this)" onkeyup="leadingZeros(this)" onclick="leadingZeros(this)">
+                </div>
+                <div>&#58;</div>
+                <div class="time">
+                    <label for="seconds">Seconds</label>
+                    <input type="number" name="seconds" id="seconds" value="00" min="0" max="59"
+                        onchange="leadingZeros(this)" onkeyup="leadingZeros(this)" onclick="leadingZeros(this)">
+                </div>
+            </div>
+
+            <label class="heading">Alarm Sound</label>
+            <div class="sound-settings">
+                <div class="sound">
+                    <input type="radio" name="sound" id="horn" value="./sounds/bike-horn.wav" checked>
+                    <label for="horn"></label>Horn</label>
+                </div>
+                <div class="sound">
+                    <input type="radio" name="sound" id="bell" value="./sounds/class-bell.wav">
+                    <label for="bell">Bell</label>
+                </div>
+                <div class="sound">
+                    <input type="radio" name="sound" id="beeper" value="./sounds/pager-beep.wav">
+                    <label for="beeper">Beeper</label>
+                </div>
+                <div class="sound">
+                    <input type="radio" name="sound" id="phone" value="./sounds/phone.wav">
+                    <label for="phone">Phone</label>
+                </div>
+                <div class="sound">
+                    <input type="radio" name="sound" id="rooster" value="./sounds/rooster.wav">
+                    <label for="rooster">Rooster</label>
+                </div>
+            </div>
+
+
+            <div class="buttons">
+                <button class="btn start">Start</button>
+                <button class="btn stop">Stop</button>
+                <button class="btn reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <audio class="alarm" src="./sounds/bike-horn.wav"></audio>
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

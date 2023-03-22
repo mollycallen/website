@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Nova Mono", monospace;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(230, 230, 237, 1) 0%,
+    rgba(42, 176, 205, 0.448019801980198) 45%,
+    rgba(124, 128, 129, 1) 96%
+  );
+}
+.world {
+  overflow: hidden;
+  position: relative;
+  //   width: 100%;
+  //   height: 200px;
+}
+.score {
+  display: flex;
+  position: absolute;
+  font-size: 4vmin;
+  right: 3vmin;
+  top: 1vmin;
+}
+.start-btn {
+  position: absolute;
+  font-size: 6vmin;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid #777;
+  padding: 3vmin 5vmin;
+  background: #fff;
+  border-radius: 1vmin;
+  cursor: pointer;
+}
+.start-btn:hover,
+.start-btn:focus {
+  background: rgb(88, 88, 88);
+  color: #fff;
+}
+.hide {
+  display: none;
+}
+.ground {
+  --left: 0;
+  position: absolute;
+  width: 300%;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+.dino {
+  --bottom: 0;
+  position: absolute;
+  left: 1%;
+  height: 30%;
+  bottom: calc(var(--bottom) * 1%);
+}
+.crash {
+  transform: rotate(-45deg);
+}
+.cactus {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 30%;
+  bottom: 0;
+}

@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timer {
+  padding: 2rem 2rem 0 2rem;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  background: #0b3954;
+  -webkit-box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.67);
+          box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.67);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.time-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0.5rem;
+}
+
+.sound-settings {
+  font-size: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: whitesmoke;
+  color: black;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  margin: 0.8rem;
+}
+
+.sound {
+  padding: 1rem;
+}
+
+.sound label {
+  cursor: pointer;
+}
+
+.timer input {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
+
+.timer input.readonly {
+  pointer-events: none;
+  background: #6999b4;
+}
+
+.sound input {
+  cursor: pointer;
+}
+
+.timer .buttons {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.timer button {
+  margin: 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  font-family: "Ubuntu Mono", monospace;
+  padding: 1rem 3rem;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.buttons .start {
+  background: #0f630f;
+  border: 2px solid #072b07;
+}
+
+.buttons .start:hover {
+  background: #178817;
+}
+
+.buttons .stop {
+  background: #a81b1b;
+  border: 2px solid #3f0707;
+}
+
+.buttons .stop:hover {
+  background: #f82929;
+}
+
+.buttons .reset {
+  background: #7b7e7b;
+  border: 2px solid #272727;
+}
+
+.buttons .reset:hover {
+  background: #a3a3a3;
+}
+/*# sourceMappingURL=style.css.map */
