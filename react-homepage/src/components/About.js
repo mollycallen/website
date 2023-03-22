@@ -27,7 +27,7 @@ const About = () => {
                 About Me...</div>
             <div className='cat'>
                 <p className='cat-title'>Currently</p>
-                <p className="cat-detail">My kids are in school, and its time to jump back into web development. I've been updating my skillset with the latest front-end technologies and showcasing my work on this website. Some projects are simple apps created with <span className="standout">HTML/CSS/JS</span>, while others are more sophisticated using <span className="standout">React</span>, all developed using <span className="standout">Git</span> and <span className="standout">Github</span>. Please take a look around!</p>
+                <p className="cat-detail">My youngest has started college, and its time to jump back into web development. I've been updating my skillset with the latest front-end technologies and showcasing my work on this website. Some projects are simple apps created with <span className="standout">HTML/CSS/JS</span>, while others are more sophisticated using <span className="standout">React</span>, all developed using <span className="standout">Git</span> and <span className="standout">Github</span>. Please take a look around!</p>
             </div>
 
 

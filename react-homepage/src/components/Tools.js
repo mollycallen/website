@@ -22,7 +22,7 @@ const Tools = () => {
         },
 
     ]
-    const [activeToolId, setActiveToolId] = useState(0);
+    const [activeToolId, setActiveToolId] = useState(1);
     const [activeTool, setActiveTool] = useState(TOOLS[activeToolId]);
 
     function changeTool(id) {
