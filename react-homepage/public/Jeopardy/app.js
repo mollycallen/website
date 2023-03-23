@@ -112,21 +112,23 @@ async function getActiveCategories() {
     loadingDiv.style.display = 'block';
 
     try {
-        await fetch(`http://jservice.io/api/categories?offset=${offset}&count=5`)
-            .then(result => result.json())
-            .then(data => {
-                data.forEach((cat, index) => {
-                    fetch(`http://jservice.io/api/category?id=${cat.id}`)
-                        .then(result => result.json())
-                        .then(data => {
-                            let newCat = new Category(cat.id, cat.title);
-                            newCat.storeClues(data);
-                            activeCategories.push(newCat);
-                            catDivs[index].innerHTML = cat.title;
-                        })
-                })
-            })
+        let result = await fetch(`http://jservice.io/api/categories?offset=${offset}&count=5`)
+        let categories = await result.json();
+        let index = 0;
+        for await (let cat of categories) {
+            catDivs[index].innerHTML = cat.title;
+            index++;
+            console.log(cat);
+            let result2 = await fetch(`http://jservice.io/api/category?id=${cat.id}`)
+            let clues = await result2.json();
+            let newCat = new Category(cat.id, cat.title);
+            newCat.storeClues(clues);
+            activeCategories.push(newCat);
+        }
+
+
     } catch (error) {
+        console.log(error);
         alert("Jeopardy API is not available right now.  Please check back later.");
         success = false;
     } finally {
