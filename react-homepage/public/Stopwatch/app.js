@@ -15,18 +15,19 @@ class Stopwatch {
         if (!this.running) {
             //console.log("start btn pressed", this);
             this.running = true;
+            displayTime(this.digital, this.elapsedTime);
 
             if (this.digital) {
                 // set interval for every .1 second
                 this.timer = setInterval(() => {
-                    displayTime(this.digital, this.elapsedTime);
                     this.elapsedTime = this.elapsedTime + .1;
+                    displayTime(this.digital, this.elapsedTime);
                 }, 100);
             } else {
                 // set interval for every 1 second
                 this.timer = setInterval(() => {
-                    displayTime(this.digital, this.elapsedTime);
                     this.elapsedTime = this.elapsedTime + 1
+                    displayTime(this.digital, this.elapsedTime);
                 }, 1000);
             }
 
@@ -93,7 +94,7 @@ function displayTime(digital, totalSec) {
 
     } else {
 
-        const secDeg = (totalSec * 6) + 6;
+        let secDeg = (totalSec * 6);
 
         // increment the minute hand every 60 secs
         if ((totalSec % 60) === 0) {
