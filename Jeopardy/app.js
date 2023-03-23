@@ -112,14 +112,14 @@ async function getActiveCategories() {
     loadingDiv.style.display = 'block';
 
     try {
-        let result = await fetch(`http://jservice.io/api/categories?offset=${offset}&count=5`)
+        let result = await fetch(`https://jservice.io/api/categories?offset=${offset}&count=5`)
         let categories = await result.json();
         let index = 0;
         for await (let cat of categories) {
             catDivs[index].innerHTML = cat.title;
             index++;
             console.log(cat);
-            let result2 = await fetch(`http://jservice.io/api/category?id=${cat.id}`)
+            let result2 = await fetch(`https://jservice.io/api/category?id=${cat.id}`)
             let clues = await result2.json();
             let newCat = new Category(cat.id, cat.title);
             newCat.storeClues(clues);
