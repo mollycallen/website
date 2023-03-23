@@ -4,6 +4,7 @@ import About from './components/About';
 import RightRail from './components/RightRail';
 import Games from './components/Games';
 import Tools from './components/Tools';
+import News from './components/News';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
@@ -15,8 +16,9 @@ function App() {
 
         <div className="main-container">
           <section className='left-side'>
+            <News></News>
             <Routes >
-              <Route path="/" exact element={< About />} />
+              <Route path="/" exact />
               <Route path="/about" element={< About />} />
               <Route path="/games" element={< Games />} />
               <Route path="/tools" element={< Tools />} />

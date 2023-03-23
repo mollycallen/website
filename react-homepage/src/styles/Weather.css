@@ -6,11 +6,6 @@
 	white-space: nowrap;
 }
 .weather .weather-box {
-	padding: 0.5rem;
-	background: var(--sky);
-	border: 1px solid var(--ocean);
-	border-radius: 3px;
-	color: var(--black);
 	display: flex;
 	flex-direction: column;
 	gap: 0.4rem;
@@ -28,13 +23,18 @@
 .weather .weather-desc {
 	font-weight: 600;
 }
-
+.weather-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 .weather .grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	column-gap: 2rem;
-	row-gap: 1rem;
+	grid-template-columns: 1fr 1fr;
 	padding: 0.5rem 0;
+	width: fit-content;
+	align-self: center;
 }
 
 .weather .sub .icon {
@@ -49,16 +49,13 @@
 	text-transform: uppercase;
 	padding: 0.5rem 0 0.2rem 0;
 	font-weight: bold;
-	color: var(--sage);
+	color: var(--blue);
 }
 .weather .weather-header {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 0.5rem;
-}
-.weather .weather-details {
-	margin: auto;
 }
 
 .weather .credit {

@@ -1,24 +1,28 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Tools.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight, } from '@fortawesome/fontawesome-free-solid'
+
+const path = process.env.PUBLIC_URL;
 
 const Tools = () => {
     const TOOLS = [
         {
             title: 'Calculator',
-            url: "../Calculator/index.html"
+            url: `${path}/Calculator/index.html`
         },
         {
             title: 'Stopwatch',
-            url: "../Stopwatch/index.html"
+            url: `${path}/Stopwatch/index.html`
         },
         {
             title: 'Timer',
-            url: "../Timer/index.html"
+            url: `${path}/Timer/index.html`
         },
         {
             title: 'HSL Color Picker',
-            url: "../HSL/index.html"
+            url: `${path}/HSL/index.html`
         },
 
     ]
@@ -31,10 +35,12 @@ const Tools = () => {
     }
 
     return (
-        <div className="tools">
+        <div className="tools box">
             <div className='tools-menu'>
                 {TOOLS.map((tool, index) =>
-                    <button key={index} className={`tool ${activeToolId === index ? 'active' : ''}`} onClick={() => changeTool(index)}>{tool.title}</button>
+                    <button key={index} className={`tool ${activeToolId === index ? 'active' : ''}`} onClick={() => changeTool(index)}>{tool.title}&nbsp;
+                        {activeToolId === index && <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>}
+                    </button>
                 )}
             </div>
             <div className='btn-div'>
@@ -45,6 +51,7 @@ const Tools = () => {
 
             </div>
         </div>
+
     )
 }
 

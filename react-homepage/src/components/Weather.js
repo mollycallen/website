@@ -175,7 +175,7 @@ const Weather = () => {
                             </button>
                         </div>
 
-                        <div className='credit'>Data from <a href="https://open-meteo.com/" target='_blank' rel='noreferrer'>Open-Meteo.com</a></div>
+                        <div className='credit small-text'>* Data from <a href="https://open-meteo.com/" target='_blank' rel='noreferrer'>Open-Meteo.com</a></div>
                     </div>
 
                 </div>

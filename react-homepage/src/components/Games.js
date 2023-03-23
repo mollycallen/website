@@ -1,36 +1,37 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Games.css'
+const path = process.env.PUBLIC_URL;
 
 const Games = () => {
     const GAMES = [
         {
             title: 'Tic Tac Toe',
-            url: "../TicTacToe/index.html"
+            url: `${path}/TicTacToe/index.html`
         },
         {
             title: 'Matching Game',
-            url: "../Memory/index.html"
+            url: `${path}/Memory/index.html`
         },
         {
             title: 'Jeopardy',
-            url: "../Jeopardy/index.html"
+            url: `${path}/Jeopardy/index.html`
         },
         {
             title: 'Pong',
-            url: "../Pong/index.html"
+            url: `${path}/Pong/index.html`
         },
         {
             title: 'Simon',
-            url: "../Simon/index.html"
+            url: `${path}/Simon/index.html`
         },
         {
             title: 'Flappy Bird',
-            url: "../FlappyBird/index.html"
+            url: `${path}/FlappyBird/index.html`
         },
         {
             title: 'Dino Game',
-            url: "../Dino/index.html"
+            url: `${path}/Dino/index.html`
         }
 
     ]

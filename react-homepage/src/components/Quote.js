@@ -1,6 +1,5 @@
 import { useFetch } from '../hooks/UseFetch';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuoteLeft, } from "@fortawesome/free-solid-svg-icons"
+
 
 const Quote = () => {
 
@@ -12,7 +11,7 @@ const Quote = () => {
 
                 <div className='box quote-box'>
                     <div className='heading'>
-                        <FontAwesomeIcon className='icon' icon={faQuoteLeft}></FontAwesomeIcon>
+
                         Daily Quote...
                     </div>
                     {isLoading && <p>loading...</p>}

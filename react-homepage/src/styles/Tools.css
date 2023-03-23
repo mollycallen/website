@@ -1,16 +1,18 @@
-.tools {
+.main-container .left-side .tools {
 	background: white;
-	margin: 1rem;
 	position: relative;
 	display: flex;
 	min-height: 525px;
 }
+.main-container .left-side .tools.box {
+	padding: 0;
+}
 .tools .tool-area {
 	width: 100%;
 	display: flex;
-	justify-self: center;
 	align-items: flex-end;
 	background: var(--gray);
+	border-radius: 5px;
 }
 .tools .tool-area iframe {
 	margin-top: 2rem;
@@ -25,13 +27,16 @@
 	background: var(--sage);
 	width: fit-content;
 	color: white;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 .tools .tools-menu .tool {
-	padding: 1rem 2rem;
+	padding: 2rem;
 }
 .tools .tools-menu .tool:hover {
 	background: var(--blue);
 	font-weight: bold;
+	color: white;
 }
 .tools .tools-menu button {
 	border: none;
@@ -42,6 +47,7 @@
 }
 
 .tools .tools-menu .active {
-	background: var(--blue);
+	background: var(--gray);
 	font-weight: bold;
+	color: var(--black);
 }

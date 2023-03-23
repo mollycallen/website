@@ -7,6 +7,7 @@
 	--gray: #e6e6e6;
 	--black: #333;
 	--light-gray: #eee;
+	--dark-gray: #888;
 	--accent: rgb(247, 117, 57);
 }
 * {
@@ -31,6 +32,8 @@ body {
 .title {
 	font-size: 1.2rem;
 	font-weight: bold;
+	color: var(--black);
+	vertical-align: center;
 }
 .standout {
 	color: #914022;
@@ -47,12 +50,18 @@ body {
 }
 .main-container .right-side {
 	flex: 1;
+	min-width: 350px;
 }
 .main-container .left-side {
-	flex: 3;
-	padding: 0.5rem;
+	padding: 1rem 1.5rem;
+	flex: 5;
 }
-.indent {
+.main-container .left-side .box {
+	margin-bottom: 1rem;
+	padding: 1rem;
+	border-radius: 5px;
+}
+.main-container .left-side .indent {
 	padding-left: 0.8rem;
 }
 
@@ -104,7 +113,7 @@ body {
 	font-size: 1rem;
 }
 .small-text {
-	font-size: 0.7rem;
+	font-size: 0.8rem;
 }
 
 .icon {

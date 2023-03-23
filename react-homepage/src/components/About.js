@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import "../styles/About.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight, faAngleDoubleLeft, faUser } from '@fortawesome/fontawesome-free-solid'
+const path = process.env.PUBLIC_URL;
 
 const About = () => {
     const [isMore, setIsMore] = useState(false);
@@ -18,9 +20,12 @@ const About = () => {
         }
     }
     return (
-        <div className='about border'>
+        <div className='about box'>
+            <div className='btn-div'>
+                <Link className="menu-link" to='/'><button className="close-btn">x</button></Link>
+            </div>
             <div className='avatar'>
-                <img src="./images/molly-avatar-cropped.png" alt="Molly's avatar"></img>
+                <img src={`${path}/images/molly-avatar-cropped.png`} alt="Molly's avatar"></img>
             </div>
             <div className="title">
                 <FontAwesomeIcon className='icon' icon={faUser}></FontAwesomeIcon>
@@ -63,14 +68,14 @@ const About = () => {
                     <div className='cat'>
                         <p className='cat-title'>Education</p>
                         <div className='row'>
-                            <a href='http://www.osu.edu'><img alt="The Ohio State University icon" className="school-icon" src='./images/Ohio_State_Buckeyes_logo.svg'></img></a>
+                            <a href='http://www.osu.edu'><img alt="The Ohio State University icon" className="school-icon" src={`${path}/images/Ohio_State_Buckeyes_logo.svg`}></img></a>
                             <div>
                                 The Ohio State University -
                                 BS in Computer Science
                             </div>
                         </div>
                         <div className='row'>
-                            <a href="http://www.etsu.edu"><img alt="East Tennessee State University icon" className="school-icon" src='./images/200px-East_Tennessee_State_Buccaneers_logo.svg.png'></img></a>
+                            <a href="http://www.etsu.edu"><img alt="East Tennessee State University icon" className="school-icon" src={`${path}/images/200px-East_Tennessee_State_Buccaneers_logo.svg.png`}></img></a>
                             <div>
                                 East Tennessee State University -
                                 MS in Computer Science

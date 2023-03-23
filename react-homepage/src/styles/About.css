@@ -1,7 +1,7 @@
 .about {
 	position: relative;
 	overflow: hidden;
-	margin: 1rem;
+
 	background: white;
 }
 
@@ -11,10 +11,10 @@
 	padding: 1.5rem 0 0.5rem 0;
 }
 .about .cat > * {
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 }
 .about .cat-detail {
-	line-height: 1.2rem;
+	line-height: 1.3rem;
 	padding-left: 0.5rem;
 	padding-bottom: 0.5rem;
 }
@@ -26,6 +26,7 @@
 .about .cat-detail .skill {
 	flex: 1;
 	padding: 0.3rem;
+	font-size: 0.8rem;
 }
 
 .about .school-icon {
@@ -57,7 +58,7 @@
 .about .job {
 	display: flex;
 	flex-direction: column;
-	font-size: 0.7rem;
+	font-size: 0.8rem;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 0.5rem;

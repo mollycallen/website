@@ -2,10 +2,6 @@
 	font-size: 0.8rem;
 }
 
-.quote-box {
-	background: var(--blue);
-	color: white;
-}
 .quote-box .quote {
 	padding: 0 1rem;
 }
@@ -17,23 +13,21 @@
 	text-align: right;
 }
 .right-side {
-	background: var(--ocean);
+	background: var(--sage);
 	padding: 1rem;
 }
 .right-side .box {
-	padding: 1rem;
-	border-radius: 3px;
+	border-radius: 4px;
 	display: flex;
 	flex-direction: column;
-	gap: 0.4rem;
+	padding: 0.7rem;
+	margin-bottom: 1rem;
+	background: var(--ocean);
 }
 
 .right-side .box .heading {
-	font-size: 1rem;
+	font-size: 1.1rem;
 	font-weight: bold;
-	padding: 0.5rem 0;
-}
-.right-side .cat-box {
-	background: var(--sage);
-	color: var(--light-gray);
+	padding: 0.5rem 0 1rem 0;
+	color: var(--black);
 }
