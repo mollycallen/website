@@ -17,8 +17,9 @@ function App() {
         <div className="main-container">
           <section className='left-side'>
             <News></News>
+
             <Routes >
-              <Route path="/" exact element={<></>} />
+              <Route path="/" exact element={<About />} />
               <Route path="/about" element={< About />} />
               <Route path="/games" element={< Games />} />
               <Route path="/tools" element={< Tools />} />
