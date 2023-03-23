@@ -120,7 +120,10 @@ i {
 	cursor: pointer;
 	margin: 1rem;
 }
-
+.laps-div {
+	width: 150px;
+	height: 150px;
+}
 .digital button:hover {
 	background: rgb(215, 218, 223);
 	color: rgb(50, 50, 50);
@@ -157,8 +160,8 @@ i {
 }
 .analog svg {
 	margin-top: 2rem;
-	width: 250px;
-	height: 250px;
+	width: 300px;
+	height: 300px;
 }
 #analog-start-btn,
 #analog-reset-btn,
