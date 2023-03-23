@@ -19,7 +19,7 @@ function App() {
             <News></News>
 
             <Routes >
-              <Route path="/" exact element={<About />} />
+              <Route path="/" exact element={<></>} />
               <Route path="/about" element={< About />} />
               <Route path="/games" element={< Games />} />
               <Route path="/tools" element={< Tools />} />

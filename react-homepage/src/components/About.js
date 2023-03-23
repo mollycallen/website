@@ -20,9 +20,9 @@ const About = () => {
     }
     return (
         <div className='about box'>
-            {/*             <div className='btn-div'>
+            <div className='btn-div'>
                 <Link className="menu-link" to='/'><button className="close-btn">x</button></Link>
-            </div> */}
+            </div>
             <div className='avatar'>
                 <img src={`${path}/images/molly-avatar-cropped.png`} alt="Molly's avatar"></img>
             </div>
