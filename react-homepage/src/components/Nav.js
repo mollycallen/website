@@ -1,14 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, } from "@fortawesome/free-solid-svg-icons"
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { DisplayContext } from '../App'
 import { Link } from 'react-router-dom'
 import '../styles/Nav.css'
 
 const Nav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [showAbout, setShowAbout, showNews, setShowNews] = useContext(DisplayContext);
+
     function toggleMenu() {
 
-        document.getElementById('left-nav').style.width = menuOpen ? '0px' : '250px';
+        document.getElementById('left-nav').style.left = menuOpen ? '-270px' : '0px';
         setMenuOpen(prev => !prev);
     }
 
@@ -24,7 +27,18 @@ const Nav = () => {
                         <button onClick={toggleMenu} className='close-btn'>x</button>
                     </div>
                     <div className='menu-item'>
-                        <Link onClick={toggleMenu} className="menu-link" to='/about'>About Me</Link>
+                        <Link onClick={() => {
+                            setShowNews(true);
+                            toggleMenu();
+                        }
+                        } className="menu-link" to='/'>Latest News</Link>
+                    </div>
+                    <div className='menu-item'>
+                        <Link onClick={() => {
+                            setShowAbout(true);
+                            toggleMenu();
+                        }
+                        } className="menu-link" to='/'>About Me</Link>
                     </div>
                     <div className='menu-item'>
                         <Link onClick={toggleMenu} className="menu-link" to='/games'>Games</Link>

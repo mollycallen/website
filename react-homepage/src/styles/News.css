@@ -1,6 +1,7 @@
 .news {
 	background: white;
 	font-size: 1rem;
+	position: relative;
 }
 .news h2 {
 	padding-bottom: 0.8rem;

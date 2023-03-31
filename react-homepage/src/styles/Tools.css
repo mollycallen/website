@@ -32,6 +32,7 @@
 }
 .tools .tools-menu .tool {
 	padding: 2rem;
+	border-bottom: 1px solid var(--gray);
 }
 .tools .tools-menu .tool:hover {
 	background: var(--blue);

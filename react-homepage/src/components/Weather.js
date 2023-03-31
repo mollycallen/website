@@ -1,5 +1,6 @@
 import { useFetch } from '../hooks/UseFetch';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWind, faUmbrella, faMugHot, faThermometerHalf, faCloudSun, faSun, faAdjust, faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 import '../styles/Weather.css';
@@ -108,9 +109,7 @@ const Weather = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='weather-desc '>
-                                    <p></p>
-                                </div>
+
                                 <div className="grid">
                                     <div className="grid-row">
                                         <p className="title">High</p>
@@ -163,6 +162,7 @@ const Weather = () => {
                                             })}
                                         </p>
                                     </div>
+
                                 </div>
                                 <div className='btn-div'>
                                     <button className='btn' onClick={changeCoordinates} >

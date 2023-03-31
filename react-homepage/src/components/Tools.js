@@ -13,6 +13,10 @@ const Tools = () => {
             url: `${path}/Calculator/index.html`
         },
         {
+            title: 'Todo List',
+            url: `${path}/Todo/index.html`
+        },
+        {
             title: 'Stopwatch',
             url: `${path}/Stopwatch/index.html`
         },

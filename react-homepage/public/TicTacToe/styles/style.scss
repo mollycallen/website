@@ -13,20 +13,20 @@ $dark-gray: #293241;
 
 body {
 	font-family: "Roboto", sans-serif;
+	display: flex;
+	justify-content: center;
 }
 .container {
 	background: $med-blue;
-
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: no-wrap;
-	margin: auto;
-	max-width: 50rem;
 	border: 2px solid black;
-	margin: 1rem 1rem;
+	margin: 2rem;
 	border-radius: 4px;
+	width: fit-content;
 }
 
 .game-header {
@@ -47,20 +47,15 @@ body {
 }
 .board {
 	grid-area: board;
-	width: 100%;
-	height: 100%;
 	display: grid;
 	align-content: center;
-	grid-template-columns: 1fr 1fr 1fr;
-	// grid-auto-rows: 9rem;
-	// grid-auto-columns: 7rem;
+	grid-template-columns: repeat(3, 80px);
 	column-gap: 0;
 	row-gap: 0;
-	box-shadow: 6px 7px 11px -1px rgba(0, 0, 0, 0.54);
 }
 .cell {
-	min-width: 2rem;
-	min-height: 6rem;
+	width: 80px;
+	height: 80px;
 	font-family: "Bungee Inline", cursive;
 	background: white;
 	font-size: 2rem;

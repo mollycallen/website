@@ -1,43 +1,42 @@
 .game-box {
 	width: 100%;
 	height: 100%;
-	background: white;
+	background: var(--gray);
 	border: 1px solid var(--blue);
 	border-radius: 4px;
 	position: relative;
-	padding: 1.8rem;
 }
 .game-box .tab-menu {
 	display: flex;
 	justify-content: flex-start;
-	width: 100%;
-	padding-top: 0.3rem;
+	width: 95%;
 }
 
 .game-box .tab-menu .tab {
-	font-size: 0.8rem;
-	padding: 0.5rem 2rem;
-	background: var(--ocean);
+	font-size: 1rem;
+	padding: 1rem 2rem;
+	background: var(--sage);
+	border-right: 1px solid var(--sky);
 	cursor: pointer;
-	border-top-right-radius: 1.5rem;
-	border: 2px solid var(--blue);
+	color: white;
 }
-.game-box .tab-menu .no-tab {
-	width: 100%;
-	border-bottom: 2px solid var(--blue);
-	display: grid;
+.game-box .tab-menu .tab:hover {
+	background: var(--blue);
+}
+.game-box .tab-menu button {
+	border: none;
+	outline: none;
 }
 .game-box .game-area {
 	width: 100%;
-	height: 90%;
+	height: 85%;
 	max-height: 740px;
 	background: var(--gray);
-	border: 2px solid var(--blue);
 	border-top: none;
 	overflow: visible;
 }
 .game-box .tab-menu .tab.active {
-	border-bottom: none;
+	border: none;
 	background: var(--gray);
 	color: var(--black);
 	font-weight: 600;

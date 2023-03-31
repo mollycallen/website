@@ -35,7 +35,7 @@ const Games = () => {
         }
 
     ]
-    const [activeGameId, setActiveGameId] = useState(5);
+    const [activeGameId, setActiveGameId] = useState(2);
     const [activeGame, setActiveGame] = useState(GAMES[activeGameId]);
 
     function changeGame(id) {
@@ -49,10 +49,10 @@ const Games = () => {
                 {GAMES.map((game, index) =>
                     <button key={index} className={`tab ${activeGameId === index ? 'active' : ''}`} onClick={() => changeGame(index)}>{game.title}</button>
                 )}
-                <div className='no-tab'>
-                    <div className='btn-div'>
-                        <Link className="menu-link" to='/'><button className="close-btn">x</button></Link>
-                    </div></div>
+
+                <div className='btn-div'>
+                    <Link className="menu-link" to='/'><button className="close-btn">x</button></Link>
+                </div>
             </div>
             <div className='game-area'>
                 <iframe title="gameboard" src={activeGame.url}></iframe>
