@@ -6,7 +6,6 @@ import RightRail from './components/RightRail';
 import Games from './components/Games';
 import Tools from './components/Tools';
 import News from './components/News';
-import Forecast from './components/Forecast';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 
 export const DisplayContext = createContext();
@@ -27,10 +26,9 @@ function App() {
               <About></About>
               <Routes >
                 <Route path="/" element={<></>} />
-                <Route path="/about" element={< About />} />
-                <Route path="/games" element={< Games />} />
-                <Route path="/tools" element={< Tools />} />
-                <Route path="/forecast" element={< Forecast />} />
+                <Route path="/website/about" element={< About />} />
+                <Route path="/website/games" element={< Games />} />
+                <Route path="/website/tools" element={< Tools />} />
               </Routes>
             </section>
             <section className='right-side'>

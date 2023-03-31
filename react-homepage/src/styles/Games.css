@@ -20,6 +20,10 @@
 	cursor: pointer;
 	color: white;
 }
+.game-box .tab-menu .btn-div {
+	background: var(--sage);
+	color: white;
+}
 .game-box .tab-menu .tab:hover {
 	background: var(--blue);
 }

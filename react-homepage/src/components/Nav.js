@@ -31,20 +31,20 @@ const Nav = () => {
                             setShowNews(true);
                             toggleMenu();
                         }
-                        } className="menu-link" to='/'>Latest News</Link>
+                        } className="menu-link" to='/website'>Latest News</Link>
                     </div>
                     <div className='menu-item'>
                         <Link onClick={() => {
                             setShowAbout(true);
                             toggleMenu();
                         }
-                        } className="menu-link" to='/'>About Me</Link>
+                        } className="menu-link" to='/website'>About Me</Link>
                     </div>
                     <div className='menu-item'>
-                        <Link onClick={toggleMenu} className="menu-link" to='/games'>Games</Link>
+                        <Link onClick={toggleMenu} className="menu-link" to='/website/games'>Games</Link>
                     </div>
                     <div className='menu-item'>
-                        <Link onClick={toggleMenu} className="menu-link" to='/tools'>Tools</Link>
+                        <Link onClick={toggleMenu} className="menu-link" to='/website/tools'>Tools</Link>
                     </div>
                     <div className='menu-item'>
                         <Link onClick={toggleMenu} className="menu-link" to='https://mollycallen.github.io/react-8pm/' target="_blank">8pm</Link>
