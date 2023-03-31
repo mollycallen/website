@@ -9,6 +9,15 @@ html {
   font-family: "Nunito", sans-serif;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .fa-star {
   color: #bd0909;
   cursor: pointer;
@@ -25,9 +34,10 @@ html {
 }
 
 .fa-print {
-  font-size: 2rem;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0px;
+  top: 0px;
   padding: 1rem;
   cursor: pointer;
 }
@@ -42,26 +52,27 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 50rem;
+  width: 75%;
   overflow: auto;
   margin: 1rem;
+  max-width: 700px;
 }
 
 .todo-section header {
   font-family: "Kaushan Script", cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  position: relative;
+  width: 100%;
 }
 
 .todo-form {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,7 +87,7 @@ html {
       -ms-flex-align: end;
           align-items: flex-end;
   margin-bottom: 2rem;
-  border: 3px solid gray;
+  border: 2px solid gray;
   background: white;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -135,7 +146,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 3px solid gray;
+  border: 2px solid gray;
   border-radius: 0.5rem;
   background: white;
   width: 100%;
@@ -152,13 +163,15 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: white;
   font-size: 1rem;
   border-bottom: 1px solid gray;
   padding: 0.5rem 0.5rem;
-  margin-bottom: 0.2rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.todo-list .todo:last-child {
+  border-bottom: none;
 }
 
 .todo-list .todo:hover {
@@ -172,13 +185,13 @@ html {
 }
 
 .todo-list .todo-date {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-style: italic;
   padding: 0rem 1.5rem;
 }
 
 .todo-list .todo i {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0rem 0.5rem;
 }
 
@@ -214,16 +227,6 @@ p.checked {
   text-decoration-thickness: 2px;
 }
 
-@media screen and (max-width: 800) {
-  .todo-section {
-    width: 100vh;
-    height: 100vh;
-  }
-  header {
-    text-align: center;
-  }
-}
-
 @media print {
   .todo-section {
     width: 100%;
@@ -232,7 +235,7 @@ p.checked {
     font-size: 2rem;
     padding: 1rem;
   }
-  .todo-section .fa-print i {
+  .todo-section i.fa-print {
     display: none;
   }
   .todo {
