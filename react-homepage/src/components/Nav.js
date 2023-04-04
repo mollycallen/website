@@ -41,6 +41,9 @@ const Nav = () => {
                         } className="menu-link" to='/website'>About Me</Link>
                     </div>
                     <div className='menu-item'>
+                        <Link onClick={toggleMenu} className="menu-link" to='/website/recipe'>Recipe Search</Link>
+                    </div>
+                    <div className='menu-item'>
                         <Link onClick={toggleMenu} className="menu-link" to='/website/games'>Games</Link>
                     </div>
                     <div className='menu-item'>

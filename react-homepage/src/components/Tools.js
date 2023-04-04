@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import '../styles/Tools.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight, } from '@fortawesome/fontawesome-free-solid'
@@ -7,6 +7,8 @@ import { faAngleRight, } from '@fortawesome/fontawesome-free-solid'
 const path = process.env.PUBLIC_URL;
 
 const Tools = () => {
+    let { id } = useParams();
+
     const TOOLS = [
         {
             title: 'Calculator',
@@ -30,7 +32,7 @@ const Tools = () => {
         },
 
     ]
-    const [activeToolId, setActiveToolId] = useState(1);
+    const [activeToolId, setActiveToolId] = useState(id || 1);
     const [activeTool, setActiveTool] = useState(TOOLS[activeToolId]);
 
     function changeTool(id) {

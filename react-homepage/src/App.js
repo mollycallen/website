@@ -25,7 +25,6 @@ function App() {
             <section className='left-side'>
               <News></News>
               <About></About>
-              <Recipe></Recipe>
               <Routes >
                 <Route path="/" element={<></>} />
                 <Route path="/website/about" element={< About />} />

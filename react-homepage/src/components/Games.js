@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import '../styles/Games.css'
 const path = process.env.PUBLIC_URL;
 
 const Games = () => {
+
+    let { id } = useParams();
     const GAMES = [
         {
             title: 'Tic Tac Toe',
@@ -35,7 +37,7 @@ const Games = () => {
         }
 
     ]
-    const [activeGameId, setActiveGameId] = useState(2);
+    const [activeGameId, setActiveGameId] = useState(id || 2);
     const [activeGame, setActiveGame] = useState(GAMES[activeGameId]);
 
     function changeGame(id) {

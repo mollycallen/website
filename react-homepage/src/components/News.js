@@ -3,6 +3,7 @@ import { DisplayContext } from '../App';
 import '../styles/News.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faListAlt, } from '@fortawesome/fontawesome-free-solid'
+import { Link } from 'react-router-dom';
 
 const News = () => {
     const [, , showNews, setShowNews] = useContext(DisplayContext);
@@ -19,9 +20,15 @@ const News = () => {
                         The Latest...
                     </div>
                     <div className='news-item'>
+                        <div className='news-date'>4/04/23</div>
+                        <div className='news-text'>
+                            Added a new recipe section.  Still working on a few details, but the search feature is pretty slick. Check it out <Link to='/website/recipe'>here!</Link>
+                        </div>
+                    </div>
+                    <div className='news-item'>
                         <div className='news-date'>3/31/23</div>
                         <div className='news-text'>
-                            Added useContext hook to save settings throughout website. Added Todo List in Tools section.
+                            Added Todo List in Tools section. Old school todo list with data stored in local storage. You can add, delete, mark complete or priority, and print todos. Take a look <Link to='/website/tools'>here!</Link>
                         </div>
                     </div>
                     <div className='news-item'>
