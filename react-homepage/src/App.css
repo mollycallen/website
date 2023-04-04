@@ -50,7 +50,7 @@ body {
 }
 .main-container .right-side {
 	flex: 1;
-	min-width: 350px;
+	min-width: 300px;
 }
 .main-container .left-side {
 	padding: 1rem 1.5rem;

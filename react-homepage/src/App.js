@@ -7,6 +7,7 @@ import Games from './components/Games';
 import Tools from './components/Tools';
 import News from './components/News';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import Recipe from './components/Recipe';
 
 export const DisplayContext = createContext();
 
@@ -24,9 +25,11 @@ function App() {
             <section className='left-side'>
               <News></News>
               <About></About>
+              <Recipe></Recipe>
               <Routes >
                 <Route path="/" element={<></>} />
                 <Route path="/website/about" element={< About />} />
+                <Route path="/website/recipe" element={< Recipe />} />
                 <Route path="/website/games" element={< Games />} />
                 <Route path="/website/tools" element={< Tools />} />
               </Routes>
