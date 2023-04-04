@@ -73,7 +73,6 @@ let countDown;
 
 function endCountDown() {
     clearInterval(countDown);
-    console.log("clearing countdown interval");
 }
 
 function startCountDown() {

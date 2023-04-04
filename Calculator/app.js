@@ -100,7 +100,6 @@ class Equation {
         ans = x * y;
         break;
       case '÷':
-        console.log('divide');
         ans = x / y;
         break;
       default:

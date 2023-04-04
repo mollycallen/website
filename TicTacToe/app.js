@@ -260,7 +260,6 @@ cellList.forEach((cell) => {
 
 const playBtn = document.querySelector(".play-btn");
 playBtn.addEventListener("click", () => {
-  console.log("play again");
 
   game.setupNewGame();
   if (startingPlayer === user) {

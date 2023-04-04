@@ -118,7 +118,6 @@ async function getActiveCategories() {
         for await (let cat of categories) {
             catDivs[index].innerHTML = cat.title;
             index++;
-            console.log(cat);
             let result2 = await fetch(`https://jservice.io/api/category?id=${cat.id}`)
             let clues = await result2.json();
             let newCat = new Category(cat.id, cat.title);
