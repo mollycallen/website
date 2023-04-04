@@ -43,7 +43,6 @@ const Games = () => {
     function changeGame(id) {
         setActiveGameId(id);
         setActiveGame(GAMES[id]);
-        console.log(id)
     }
     return (
         <div className='game-box'>

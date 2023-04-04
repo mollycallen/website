@@ -60,7 +60,6 @@ const Weather = () => {
         await fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=1012f9575c9243dfb3bf2e47af182a28`, { method: 'GET' })
             .then(response => response.json())
             .then(result => {
-                console.log(result.features[0].properties)
                 setCityName(`${result.features[0].properties.city}, ${result.features[0].properties.state_code}`)
             })
 

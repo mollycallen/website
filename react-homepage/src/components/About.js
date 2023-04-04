@@ -13,7 +13,6 @@ const About = () => {
     const showMore = () => {
         setIsMore(prev => !prev);
         const moreDiv = document.getElementById("more-div");
-        console.log(moreDiv);
         if (isMore) {
             moreDiv.style.display = 'none';
         } else {

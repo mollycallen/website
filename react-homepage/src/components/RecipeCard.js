@@ -1,9 +1,7 @@
-import React from 'react'
-
 const RecipeCard = ({ details, setShowRecipeCard }) => {
-    console.log(details)
+
     return (
-        <div className='recipe-card'>
+        <div className='recipe-card' id="recipe-id">
             <div className='btn-div'>
                 <button className="close-btn" onClick={() => setShowRecipeCard(false)}>x</button>
             </div>

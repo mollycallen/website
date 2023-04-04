@@ -246,7 +246,6 @@ printIcon.addEventListener('click', () => {
   window.print();
 })
 function updateDates() {
-  console.log("updating dates")
   if (todoList.list.length > 0) {
     todoList.list.forEach(todo => {
       const dateP = todo.row.children[1];
