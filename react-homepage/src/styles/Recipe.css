@@ -1,5 +1,6 @@
 :root {
-	--size: 180px;
+	--img-size: 180px;
+	--preview-size: 200px;
 }
 .recipe {
 	background: white;
@@ -35,17 +36,21 @@
 .recipe-preview {
 	position: relative;
 	padding: 0.5rem;
+	margin-right: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	width: var(--size);
+	min-width: var(--preview-size);
 	background: var(--gray);
 	border-radius: 4px;
 	overflow: hidden;
 	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 	-webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.recipe-preview:last-child {
+	margin-right: 0px;
 }
 .recipe .recipe-preview:hover {
 	background: var(--blue);
@@ -63,14 +68,47 @@
 }
 .recipe-list {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
+	flex-wrap: nowrap;
+	gap: 0.5rem;
 	justify-content: space-between;
+	align-items: stretch;
 	margin-top: 1rem;
 }
+
+.scroll-recipes {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+}
+
+.scroll-recipes::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+
+.recipe-list {
+	max-width: 70vw;
+}
+.recipe-list .disable {
+	opacity: 0.3;
+	pointer-events: none;
+}
+.recipe-list .icon {
+	font-size: 2rem;
+	color: var(--dark-gray);
+	cursor: pointer;
+	align-self: center;
+}
+.recipe-list .icon:hover {
+	color: var(--blue);
+}
 .recipe-preview img {
-	width: var(--size);
-	height: var(--size);
+	min-width: var(--img-size);
+	width: var(--img-size);
+	height: var(--img-size);
 	object-fit: contain;
 	border-radius: 50%;
 	border: 4px solid var(--dark-gray);
@@ -78,6 +116,7 @@
 .recipe-card {
 	width: 700px;
 	max-width: 100%;
+	min-width: 300px;
 	overflow: visible;
 	display: flex;
 	flex-direction: column;
