@@ -45,16 +45,18 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
+	max-width: 100vw;
 	width: 100%;
 	height: 100%;
 }
 .main-container .right-side {
-	flex: 1;
-	min-width: 300px;
+	margin: 0 auto;
+	min-width: 280px;
+	width: 24vw;
 }
 .main-container .left-side {
 	padding: 1rem 1.5rem;
-	flex: 5;
+	max-width: 74vw;
 }
 .main-container .left-side .box {
 	margin-bottom: 1rem;

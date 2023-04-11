@@ -1,0 +1,35 @@
+.recipe .search-container {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	width: 100%;
+}
+.recipe .search-field {
+	width: 100%;
+	padding: 1rem;
+	outline: none;
+	border: none;
+	background: var(--gray);
+	color: black;
+	font-size: 1rem;
+}
+.search-list-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.search-list {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+.more-btn {
+	padding: 1rem 3rem;
+	margin-top: 2rem;
+	width: fit-content;
+}
