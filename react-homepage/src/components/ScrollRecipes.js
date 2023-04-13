@@ -6,6 +6,7 @@ import RecipePreview from './RecipePreview';
 import RecipeCard from './RecipeCard';
 import "../styles/ScrollRecipes.css"
 
+const PREVIEW_WIDTH = 158;
 const mealTypeArray = [
     {
         label: 'Dinner/Lunch',
@@ -61,7 +62,7 @@ const ScrollRecipes = () => {
     const [showRecipeCard, setShowRecipeCard] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
 
-    const { data, isLoading, errorMessage } = useFetch(`https://api.edamam.com/api/recipes/v2?type=public&q=''&app_id=49c90bbe&app_key=5f34781d06871dd9de9481f698f23bc5&ingr=4-12&mealType=${mealType}&cuisineType=${cuisineType}&random=false&field=label&field=image&field=images&field=source&field=url&field=yield&field=ingredientLines&field=calories&field=totalTime&field=cuisineType`)
+    const { data, isLoading, errorMessage } = useFetch(`https://api.edamam.com/api/recipes/v2?type=public&q=''&app_id=49c90bbe&app_key=5f34781d06871dd9de9481f698f23bc5&ingr=4-12&mealType=${mealType}&cuisineType=${cuisineType}&random=true&field=label&field=image&field=images&field=source&field=url&field=yield&field=ingredientLines&field=calories&field=totalTime&field=cuisineType`)
 
     useEffect(() => {
         const scrollDiv = document.getElementById('scroll-recipes-id');
@@ -88,12 +89,14 @@ const ScrollRecipes = () => {
 
     function getNext() {
         const scrollDiv = document.getElementById('scroll-recipes-id');
-        document.getElementById("scroll-recipes-id").scrollBy(scrollDiv.clientWidth, 0);
+        let scrollAmount = Math.floor(scrollDiv.clientWidth / PREVIEW_WIDTH) * PREVIEW_WIDTH;
+        document.getElementById("scroll-recipes-id").scrollBy(scrollAmount, 0);
         adjustScrollArrows();
     }
     function getPrev() {
         const scrollDiv = document.getElementById('scroll-recipes-id');
-        document.getElementById("scroll-recipes-id").scrollBy(-scrollDiv.clientWidth, 0);
+        let scrollAmount = Math.floor(scrollDiv.clientWidth / PREVIEW_WIDTH) * PREVIEW_WIDTH;
+        document.getElementById("scroll-recipes-id").scrollBy(-scrollAmount, 0);
         adjustScrollArrows();
     }
     return (
@@ -125,16 +128,16 @@ const ScrollRecipes = () => {
 
                 <div className='scrollable-container'>
 
-                    <FontAwesomeIcon id='left-arrow-id' className='icon disable' icon={faAngleLeft} onClick={getPrev}></FontAwesomeIcon>
+                    <FontAwesomeIcon id='left-arrow-id' className='icon left-arrow disable ' icon={faAngleLeft} onClick={getPrev}></FontAwesomeIcon>
 
-                    <div id='scroll-recipes-id' className='scrollable-list'>
+                    <div id='scroll-recipes-id' className='scrollable-list snaps-inline'>
                         {data.hits
                             .map((entry, index) =>
                                 <RecipePreview index={index} label={entry.recipe.label} imageUrl={entry.recipe.images.SMALL.url} setCurrentIndex={setCurrentIndex} setShowRecipeCard={setShowRecipeCard} key={index}></RecipePreview>
 
                             )}
                     </div>
-                    <FontAwesomeIcon id="right-arrow-id" className='icon' icon={faAngleRight} onClick={getNext}></FontAwesomeIcon>
+                    <FontAwesomeIcon id="right-arrow-id" className='icon right-arrow' icon={faAngleRight} onClick={getNext}></FontAwesomeIcon>
 
                 </div>
             }

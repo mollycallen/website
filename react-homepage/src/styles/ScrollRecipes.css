@@ -3,23 +3,42 @@
 .scrollable-container {
 	display: flex;
 	flex-direction: row;
+	position: relative;
 }
 .scrollable-container .icon {
-	padding: 0;
+	border: 2px solid var(--dark-gray);
+	background: white;
+	padding: 0.4rem;
+	z-index: 2;
+	border-radius: 50%;
+	position: absolute;
+}
+.scrollable-container .icon:hover {
+	background: var(--blue);
+	color: white;
+}
+.scrollable-container .icon .scrollable-container .left-arrow {
+	left: 0px;
+}
+.scrollable-container .right-arrow {
+	right: 0px;
 }
 .scrollable-list {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	gap: 0.3rem;
-	flex-wrap: nowrap;
+	margin: 0 1rem;
+	display: grid;
+	grid-auto-flow: column;
 	overflow-x: auto;
-	scroll-behavior: smooth;
+	overscroll-behavior-inline: contain;
 }
-
 .scrollable-list::-webkit-scrollbar {
 	-webkit-appearance: none;
+}
+.snaps-inline {
+	scroll-snap-type: inline mandatory;
+}
+
+.snaps-inline > * {
+	scroll-snap-align: start;
 }
 .filter-type-container {
 	display: flex;
