@@ -34,6 +34,7 @@
 	color: var(--blue);
 }
 .recipe-preview {
+	flex: 1;
 	position: relative;
 	padding: 0.5rem;
 	margin-right: 0.5rem;
