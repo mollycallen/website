@@ -61,7 +61,10 @@ const ScrollRecipes = () => {
     const [showRecipeCard, setShowRecipeCard] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(null);
 
-    const { data, isLoading, errorMessage } = useFetch(`https://api.edamam.com/api/recipes/v2?type=public&q=''&app_id=49c90bbe&app_key=5f34781d06871dd9de9481f698f23bc5&ingr=4-12&mealType=${mealType}&cuisineType=${cuisineType}&random=false&field=label&field=image&field=images&field=source&field=url&field=yield&field=ingredientLines&field=calories&field=totalTime&field=cuisineType`)
+    const API_KEY = process.env.REACT_APP_RECIPE_API_KEY;
+    const API_ID = process.env.REACT_APP_RECIPE_API_ID;
+
+    const { data, isLoading, errorMessage } = useFetch(`https://api.edamam.com/api/recipes/v2?type=public&q=''&app_id=${API_ID}&app_key=${API_KEY}&ingr=4-12&mealType=${mealType}&cuisineType=${cuisineType}&random=false&field=label&field=image&field=images&field=source&field=url&field=yield&field=ingredientLines&field=calories&field=totalTime&field=cuisineType`)
 
     useEffect(() => {
         const scrollDiv = document.getElementById('scroll-recipes-id');
@@ -74,7 +77,9 @@ const ScrollRecipes = () => {
     function adjustScrollArrows() {
 
         const scrollDiv = document.getElementById('scroll-recipes-id');
+        console.log(scrollDiv.scrollLeft);
         if (scrollDiv.scrollLeft <= 0) {
+
             document.getElementById('left-arrow-id').classList.add('disable');
         } else {
             document.getElementById('left-arrow-id').classList.remove('disable');
@@ -89,12 +94,12 @@ const ScrollRecipes = () => {
     function getNext() {
         const scrollDiv = document.getElementById('scroll-recipes-id');
         document.getElementById("scroll-recipes-id").scrollBy(scrollDiv.clientWidth, 0);
-        adjustScrollArrows();
+        requestAnimationFrame(adjustScrollArrows);
     }
     function getPrev() {
         const scrollDiv = document.getElementById('scroll-recipes-id');
         document.getElementById("scroll-recipes-id").scrollBy(-scrollDiv.clientWidth, 0);
-        adjustScrollArrows();
+        requestAnimationFrame(adjustScrollArrows);
     }
     return (
         <div className='recipe outer-recipe-container'>

@@ -22,7 +22,7 @@ const News = () => {
                     <div className='news-item'>
                         <div className='news-date'>4/04/23</div>
                         <div className='news-text'>
-                            Added more functionality to the recipe section-- two dropdown filters with results displayed in a horizontally scrollable list, and a more button at the bottom of the search section to display 20 more recipes.  Definitely worth a <Link to='/website/recipe'>peek</Link>!
+                            Added more functionality to the recipe section-- two dropdown filters with results displayed in a horizontally scrollable list, and a more button at the bottom of the search section to display 20 more recipes.  Maybe try a  <Link to='/website/recipe'>new recipe</Link> for dinner!
                         </div>
                     </div>
                     <div className='news-item'>
