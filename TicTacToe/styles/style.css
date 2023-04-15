@@ -60,7 +60,7 @@ body {
   -ms-grid-columns: 1fr auto;
       grid-template-columns: 1fr auto;
       grid-template-areas: "board scoreboard";
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .board {
@@ -71,15 +71,15 @@ body {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  -ms-grid-columns: (80px)[3];
-      grid-template-columns: repeat(3, 80px);
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
   -webkit-column-gap: 0;
           column-gap: 0;
   row-gap: 0;
 }
 
 .cell {
-  width: 80px;
+  min-width: 80px;
   height: 80px;
   font-family: "Bungee Inline", cursive;
   background: white;
@@ -192,7 +192,7 @@ body {
 .score-container .x,
 .score-container .o {
   display: block;
-  padding-right: 1rem;
+  padding-right: 0.3rem;
   font-size: 1.2rem;
   color: #269b8f;
   font-family: "Bungee Inline", cursive;
@@ -203,7 +203,8 @@ body {
 }
 
 .score-container .d {
-  opacity: 0;
+  color: black;
+  opacity: 0.5;
 }
 
 .play-btn {

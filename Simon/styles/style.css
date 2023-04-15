@@ -8,7 +8,6 @@
 .main {
   height: 100%;
   margin: 1rem auto;
-  min-width: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +25,7 @@
 }
 
 .main .game {
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 1rem;
   font-family: "Play", sans-serif;
   position: relative;
   display: -webkit-box;
@@ -42,8 +41,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 25rem;
-  width: 25rem;
+  height: 22rem;
+  width: 22rem;
   -webkit-filter: drop-shadow(0 0 10px #1d1d1d);
           filter: drop-shadow(0 0 10px #1d1d1d);
 }
@@ -257,5 +256,14 @@
 
 .game .yellow.highlight {
   background-color: yellow;
+}
+
+@media only screen and (max-width: 500px) {
+  .main .game {
+    margin: 0.5rem;
+    height: 18rem;
+    width: 18rem;
+    overflow: hidden;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -43,18 +43,18 @@ body {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-template-areas: "board scoreboard";
-	padding: 1rem;
+	padding: 2rem;
 }
 .board {
 	grid-area: board;
 	display: grid;
 	align-content: center;
-	grid-template-columns: repeat(3, 80px);
+	grid-template-columns: repeat(3, auto);
 	column-gap: 0;
 	row-gap: 0;
 }
 .cell {
-	width: 80px;
+	min-width: 80px;
 	height: 80px;
 	font-family: "Bungee Inline", cursive;
 	background: white;
@@ -131,7 +131,7 @@ body {
 	.x,
 	.o {
 		display: block;
-		padding-right: 1rem;
+		padding-right: 0.3rem;
 		font-size: 1.2rem;
 		color: $user-color;
 		font-family: "Bungee Inline", cursive;
@@ -140,7 +140,8 @@ body {
 		color: $computer-color;
 	}
 	.d {
-		opacity: 0;
+		color: black;
+		opacity: 0.5;
 	}
 }
 

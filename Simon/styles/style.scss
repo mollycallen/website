@@ -7,7 +7,6 @@
 .main {
 	height: 100%;
 	margin: 1rem auto;
-	min-width: 50rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -15,15 +14,15 @@
 	flex-wrap: wrap;
 }
 .main .game {
-	margin: 1rem;
+	margin: 2rem 1rem 1rem 1rem;
 	font-family: "Play", sans-serif;
 	position: relative;
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
 	flex-direction: column;
-	height: 25rem;
-	width: 25rem;
+	height: 22rem;
+	width: 22rem;
 	filter: drop-shadow(0 0 10px rgb(29, 29, 29));
 }
 .notes {
@@ -191,4 +190,13 @@
 }
 .game .yellow.highlight {
 	background-color: rgb(255, 255, 0);
+}
+
+@media only screen and (max-width: 500px) {
+	.main .game {
+		margin: 0.5rem;
+		height: 18rem;
+		width: 18rem;
+		overflow: hidden;
+	}
 }
