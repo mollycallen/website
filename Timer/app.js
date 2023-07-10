@@ -76,7 +76,7 @@ function endCountDown() {
 }
 
 function startCountDown() {
-    console.log("counting", seconds.value);
+    //console.log("counting", seconds.value);
     countDown = setInterval(() => {
         if (seconds.value > 0) {
             seconds.value = (seconds.value - 1).toString().padStart(2, 0);
