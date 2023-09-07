@@ -1,302 +1,220 @@
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #98c1d9;
+	width: 100%;
+	height: 100vh;
 }
 
 .container {
-  background: #98c1d9;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
-  border: 2px solid black;
-  margin: 2rem;
-  border-radius: 4px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin: 1rem;
+	border-radius: 4px;
+	overflow: hidden;
 }
 
 .game-header {
-  font-family: "Bungee Inline", cursive;
-  font-size: 3rem;
-  color: #293241;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+	font-family: "Bungee Inline", cursive;
+	font-size: 5rem;
+	color: #293241;
+	display: flex;
+	white-space: nowrap;
+	padding-bottom: 1rem;
 }
 
 .game-main {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr auto;
-      grid-template-columns: 1fr auto;
-      grid-template-areas: "board scoreboard";
-  padding: 2rem;
+	max-width: 600px;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1rem;
 }
 
 .board {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: board;
-  display: -ms-grid;
-  display: grid;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
-  -webkit-column-gap: 0;
-          column-gap: 0;
-  row-gap: 0;
+	flex: 2;
+	display: grid;
+	align-content: center;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 0;
+	row-gap: 0;
+	height: 60vh;
 }
 
 .cell {
-  min-width: 80px;
-  height: 80px;
-  font-family: "Bungee Inline", cursive;
-  background: white;
-  font-size: 2rem;
-  pointer-events: none;
-  cursor: not-allowed;
-  border: 2px solid #293241;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+	height: 20vh;
+	font-family: "Bungee Inline", cursive;
+	background: white;
+	font-size: 2rem;
+	pointer-events: none;
+	cursor: not-allowed;
+	border: 1px solid #bebfc0;
+	border-collapse: collapse;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .x-win {
-  background: #269b8f;
-  color: white;
+	background: #269b8f;
+	color: white;
 }
 
 .o-win {
-  background: #df8b16;
-  color: white;
+	background: #df8b16;
+	color: white;
 }
 
 .cell.available {
-  pointer-events: auto;
-  cursor: pointer;
-  background: white;
+	pointer-events: auto;
+	cursor: pointer;
+	background: white;
 }
 
 .available:hover {
-  background: #e7e6e3;
+	background: #e7e6e3;
 }
 
 .scoreboard {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: scoreboard;
-  margin-left: 2rem;
-  background: white;
-  font-size: 1rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto 1fr 1fr 1fr auto;
-      grid-template-rows: auto 1fr 1fr 1fr auto;
-      grid-template-areas: "header-area" "player-score" "computer-score" "draw-score" "play-btn";
+	flex: 1;
+	background: white;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	height: 60vh;
+	overflow: hidden;
 }
 
 .score-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header-area;
-  background: #293241;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-.score-container.player {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: player-score;
-}
-
-.score-container.computer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: computer-score;
-}
-
-.score-container.draw {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: draw-score;
-}
-
-.play-btn {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: play-btn;
+	background: #293241;
+	color: white;
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 1.5rem 0rem;
+	white-space: nowrap;
 }
 
 .score-container {
-  padding: 0 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-top: 1px solid #293241;
+	padding: 0.5rem 1rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	border-top: 2px solid #bebfc0;
 }
 
 .score-container .score {
-  padding: 0 0.5rem;
+	padding: 0 0.5rem;
 }
 
 .score-container .d,
 .score-container .x,
 .score-container .o {
-  display: block;
-  padding-right: 0.3rem;
-  font-size: 1.2rem;
-  color: #269b8f;
-  font-family: "Bungee Inline", cursive;
+	display: block;
+	padding-right: 0.3rem;
+	font-size: 1rem;
+	color: #269b8f;
+	font-family: "Bungee Inline", cursive;
 }
 
 .score-container .o {
-  color: #df8b16;
+	color: #df8b16;
 }
 
 .score-container .d {
-  color: black;
-  opacity: 0.5;
+	color: black;
+	opacity: 0.5;
 }
 
 .play-btn {
-  cursor: pointer;
-  background: #3d5a80;
-  color: white;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  padding: 1rem;
-  border: none;
-  width: 100%;
+	cursor: pointer;
+	background: #3d5a80;
+	color: white;
+	font-size: 1.2rem;
+	font-family: "Roboto", sans-serif;
+	border: none;
+	width: 100%;
+	height: 100%;
 }
 
 .play-btn:hover {
-  text-decoration: underline;
-  opacity: 0.8;
+	text-decoration: underline;
+	opacity: 0.8;
 }
 
 .highlight {
-  background: #e7e6e3;
+	background: #e7e6e3;
 }
 
 .x-select {
-  color: #269b8f;
-  cursor: not-allowed;
+	color: #269b8f;
+	cursor: not-allowed;
 }
 
 .o-select {
-  color: #df8b16;
-  cursor: not-allowed;
+	color: #df8b16;
+	cursor: not-allowed;
 }
 
 @media (max-width: 600px) {
-  body {
-    background: #333;
-  }
-  .game-header {
-    font-size: 2.5rem;
-    color: white;
-  }
-  .game-main {
-    margin: auto;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "board" "scoreboard";
-    padding: 1rem;
-  }
-  .board {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  .scoreboard {
-    background: #ccc;
-    height: 8rem;
-    margin-left: 0;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
-        grid-template-areas: "player-score draw-score computer-score " "... play-btn ...";
-  }
-  .score-header {
-    display: none;
-  }
-  .play-btn {
-    padding: 0;
-    font-size: 1.2rem;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1/4;
-  }
-  .score-container {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-top: none;
-    justify-self: flex-start;
-  }
-  .score-container.computer {
-    justify-self: flex-end;
-  }
-  .cell {
-    min-width: 3rem;
-    min-height: 6rem;
-    font-size: 2rem;
-  }
-  .highlight {
-    background: inherit;
-  }
+	.game-header {
+		font-size: 4rem;
+	}
+
+	.board {
+		box-shadow: none;
+	}
+
+	.highlight {
+		background: inherit;
+	}
 }
-/*# sourceMappingURL=style.css.map */
+@media (max-width: 500px) {
+	.game-header {
+		font-size: 2.8rem;
+	}
+	.game-main {
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 1rem;
+	}
+	.scoreboard {
+		justify-content: flex-start;
+		height: fit-content;
+		flex: unset;
+	}
+	.score-container {
+		padding: 0.5rem 1rem;
+	}
+	.board {
+		flex: unset;
+		height: unset;
+	}
+	.play-btn {
+		padding: 2rem;
+	}
+	.cell {
+		height: 12vh;
+	}
+	.score-header {
+		display: none;
+		height: 0;
+	}
+}
